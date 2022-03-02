@@ -21,7 +21,6 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 def sentiment(string):
     sia = SentimentIntensityAnalyzer()
     score = sia.polarity_scores(string)
-    print(score)
     return score
 
 
