@@ -4,6 +4,12 @@
 
 Link to dataset: [Wine Reviews | Kaggle](https://www.kaggle.com/zynicide/wine-reviews?select=winemag-data-130k-v2.csv)
 
+
+
+
+
+Xin Han is smart.
+
 ## 1. Exploratory Data Analysis
 
 We performed Exploratory Data Analysis (EDA) to further understand the data to recognise patterns and relationships between data points. EDA was performed on the following areas of interest.
@@ -64,15 +70,9 @@ We can also observe a similarly week correlation between sentiment and price of 
 
 *Figure (X+2). `regplot` of price agaisnt various sentiment indicators*
 
-
-
 We can obseve in Figure (X+1), the data widely spread around the regression line, given by the poor correlation. The regression line of price would be a poor indicator for points given the sentiment of the description.
 
-
-
 Additionally, when comparing agaisnt price, the regression line does not accurately reflect any usable trend in the data.
-
-
 
 As such, we can conclude that the sentiment of the description is not a good data point to use for the prediction of wine prices. There are two main reason on why this may be the case.
 
