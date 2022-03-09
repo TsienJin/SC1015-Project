@@ -9,8 +9,12 @@ import json
 import re
 import csv
 
+import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+from nltk import word_tokenize
 
-topWords = pd.read_csv('../../Data/topKeywords.csv')
+# topWords = pd.read_csv('../../Data/topKeywords.csv')
 
 
 # function that converts description into word count
@@ -34,6 +38,13 @@ def countWords(desc = "", returnJSON = False):
         return json.dumps(count)
     else:
         return count
+    
+    
+    
+    
+# adds list of filtered words
+def filteredWords(string):
+    pass
 
 
 # adds new column to dataframe for word analysis
@@ -60,11 +71,7 @@ def addWordCount(dataframe):
         'df': dataframe
     }
     
-# adds list of filtered words
-def addFilteredCount(dataframe):
-    # NOTE: This stores the data as a JSON array in the cell
-    
-    pass
+
         
 
 
