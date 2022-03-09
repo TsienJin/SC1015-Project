@@ -6,10 +6,6 @@ Link to dataset: [Wine Reviews | Kaggle](https://www.kaggle.com/zynicide/wine-re
 
 
 
-
-
-Xin Han is smart.
-
 ## 1. Exploratory Data Analysis
 
 We performed Exploratory Data Analysis (EDA) to further understand the data to recognise patterns and relationships between data points. EDA was performed on the following areas of interest.
