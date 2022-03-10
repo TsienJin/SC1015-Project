@@ -18,6 +18,7 @@ Link to dataset: [Human Stress Detection in and through Sleep | Kaggle](https://
 
 ## Exploratory Data Analysis
 
+Coefficients of regression: ["sleep hours (sr.1)", "body temperature (t)", "blood oxygen (bo)", "heart rate (hr)"]
 ~~~~~Predicting for sr~~~~~
 Train Set : (472, 1) (472, 4)
 Test Set  : (158, 1) (158, 4)
