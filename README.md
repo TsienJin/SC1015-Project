@@ -12,9 +12,11 @@ Link to dataset: [Human Stress Detection in and through Sleep | Kaggle](https://
 **lm** -- Limb movement
 **bo** -- Blood oxygen
 **rem** -- Eye movement
-**sr** -- Sleeping hours
+**sr.1** -- Sleeping hours
 **hr** -- Heart rate
 **sl** -- Stress level
+
+
 
 ## Exploratory Data Analysis
 
