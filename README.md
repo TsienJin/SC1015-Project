@@ -24,18 +24,8 @@ Coefficients of regression: ["sleep hours (sr.1)", "body temperature (t)", "bloo
 
 -----Predicting for sr-----
 
-Train Set : (472, 1) (472, 4)
-Test Set  : (158, 1) (158, 4)
 Intercept of Regression 	: b =  [18.64486395]
 Coefficients of Regression 	: a =  [[-1.93603405  5.74601578 -2.5387048   1.5012626 ]]
-
-Goodness of Fit of Model 	Train Dataset
-Explained Variance (R^2) 	: 0.9663021219586815
-Mean Squared Error (MSE) 	: 12.533129148818286
-
-Goodness of Fit of Model 	Test Dataset
-Explained Variance (R^2) 	: 0.9673671714544374
-Mean Squared Error (MSE) 	: 12.481483611174493
 
 -----Predicting for rr-----
 
