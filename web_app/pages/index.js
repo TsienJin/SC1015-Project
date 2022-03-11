@@ -48,7 +48,7 @@ export default function Home(){
     <div className='w-full min-h-screen bg-gradient-to-t from-blue-200 via-white to-white bg-fixed'>
       <Container>
         <ImgContainer>
-          <img src='/img/index/img1.svg' />
+          <img src='/img/index/img1.svg' alt="Am I stressed?"/>
         </ImgContainer>
         <CTAtext title="How stressed are you?" text="Using a Machine Learning model, we try and predict your stress level on a range of 1 to 5, where 5 is the highest level of stress, based on indicators from when you sleep." btnText='Learn more' link='/'/>
         <FormSection title="Basic Information" collapseable={false}>

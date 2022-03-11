@@ -13,7 +13,7 @@ export default function FieldText({title='Field', method=()=>{}, type="text", re
             outline-none border border-gray-500
             focus:border-blue-500
             '/>
-        <label for={title} className='absolute transition-all duration-150
+        <label htmlFor={title} className='absolute transition-all duration-150
                                       text-lg text-gray-500
                                       peer-focus:text-blue-500
                                       peer-placeholder-shown:top-4 peer-placeholder-shown:left-4
