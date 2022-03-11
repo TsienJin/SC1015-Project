@@ -37,7 +37,7 @@ export default function FormSection({ children='', title='Title', description=''
   return (
     <div className='w-full bg-white rounded-lg p-4 shadow relative transition-all duration-150'>
         {collapseable?<Chevron method={toggleExpand} state={ref.current}/>:""}
-        <div className='w-full flex flex-col mb-4'>
+        <div className='w-full flex flex-col mb-2'>
             <h3 className='text-2xl font-bold text-black'>{title}</h3>
             {description.length>0?<p className='mt-2 font-light'>{description}</p>:""}
         </div>
