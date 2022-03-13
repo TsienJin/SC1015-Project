@@ -20,7 +20,31 @@ Link to dataset: [Human Stress Detection in and through Sleep | Kaggle](https://
 
 ## Exploratory Data Analysis
 
-Coefficients of regression: ["sleep hours (sr.1)", "body temperature (t)", "blood oxygen (bo)", "heart rate (hr)"]
+- We went to find the correlation of the different data columns of the data, namely "Snoring rate", "Respiration rate", "Body temperature", "Limb movement", "Blood oxygen", "Eye movement", "Sleeping hours", "Heart rate" and "Stress level"
+
+- We have found that the correlation of the variables are very strong, with most of the |correlation| more than 0.95
+
+- Since the correlation of the variables are very strong, it would mean that the other variables can be important in helping to predict the "Stress level"
+
+- We then split the dataset into train and test dataset, with the ratio of 75% train dataset and 25% test dataset uniformly in random
+
+- We have used linear regression to get the coefficients of the different data columns of the data to predict the "Stress level" for the train dataset, then tested it on the test dataset. For the train dataset, the Explained Variance (R^2) 	: 0.9998961615248196, and Mean Squared Error (MSE) 	: 0.00021075504075371282. For the test dataset, the Explained Variance (R^2) 	: 0.9998722412032275, and Mean Squared Error (MSE) 	: 0.0002441767229454771.
+
+- This shows that the model fits the data very well, with very minimal error
+
+- To cross validate the result, we have also used clustering, namely the K Means clustering algorithm.
+
+- Since K means clustering algorithm is an unsupervised machine learning algorithm, we do not have to split the data set into training data and test data
+
+- First we tried using the "Elbow method" to identify the optimum number of clusters for both the "Sleeping hours" with "Stress level", and "Body temperature" with "Stress level". The answer was 5, which was what we were loooking for as well
+
+- We then used sk.learn's KMeans function, with 5 clusters (as we identified before), to fit both the "Sleeping hours" with "Stress level", and "Body temperature" with "Stress level". However, by plotting out the graphs, we discovered that the clustering of the dataset was not as acccurate as what we wanted, however, this may be due to the small datasize that we have which caused this inaccuracy
+
+- We also tried using the "Elbow method" on the dataset as a whole, without splitting into "Sleeping hours" and "Body temperature", however, the result optimum number of clusters was 4, which was not what we expected.
+
+- Nevertheless, we tried using the sk.learn KMeans function to fit the dataset into 4 clusters (as what "Elbow method" suggested), by plotting out the graph, expectedly, the clusters of the data points was worse than simply clustering "Sleeping hours" and "Body temperature".
+
+Coefficients of regression: ["sleeping hours (sr.1)", "body temperature (t)", "blood oxygen (bo)", "heart rate (hr)"]
 
 -----Predicting for sr-----
 
