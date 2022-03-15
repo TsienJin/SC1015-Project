@@ -7,6 +7,7 @@ import CTAtext from './components/reuse/ctaText'
 import FieldText from './components/reuse/field'
 import FormSection from './components/reuse/formSection'
 import ImgContainer from './components/reuse/imgContainer'
+import StressIndicator from './components/reuse/home/stressIndicator'
 
 
 
@@ -63,6 +64,9 @@ export default function Home(){
           <FieldText title="Limb Movement" type='number' required={false}/>
           <FieldText title="Rapid Eye Movement" type='number' required={false}/>
         </FormSection>
+        <FormSection title="Stress Meter" expand={true} collapseable={false}>
+          <StressIndicator/>
+        </FormSection> 
       </Container>
     </div>
   )
