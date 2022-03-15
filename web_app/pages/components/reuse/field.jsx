@@ -17,9 +17,10 @@ export default function FieldText({title='Field', method=()=>{}, type="text", re
                                       text-base text-gray-500
                                       peer-focus:text-blue-500
                                       peer-placeholder-shown:top-4 peer-placeholder-shown:left-4
-                                      peer-focus:-top-7 peer-focus:left-1
-                                      -top-7 left-1
+                                      peer-focus:-top-6 peer-focus:left-1
+                                      -top-6 left-1
                                       md:text-lg
+                                      md:-top-7 md:peer-focus:-top-7
                                       '>{title}</label>
         <span className='absolute -top-6 right-1 text-gray-500 transition-all duration-150
                         peer-focus:text-blue-500
