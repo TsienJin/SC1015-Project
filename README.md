@@ -46,6 +46,11 @@ Link to dataset: [Human Stress Detection in and through Sleep | Kaggle](https://
 
 Coefficients of regression: ["sleeping hours (sr.1)", "body temperature (t)", "blood oxygen (bo)", "heart rate (hr)"]
 
+-----FOR ALL 8 COEFFICIENTS-----
+Intercept of Regression 	: b =  [2.30958516]
+Coefficients of Regression 	: a =  [[ 0.00967718  0.01734862 -0.29588161 -0.07744968  0.04731092  0.03202785
+  -0.11154598  0.04337155]]
+  
 -----Predicting for sr-----
 
 Intercept of Regression 	: b =  [18.64486395]
