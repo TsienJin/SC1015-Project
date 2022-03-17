@@ -5,10 +5,15 @@ export default function FieldText({title='Field', method=()=>{}, type="text", re
 
   const inputRef = useRef()
 
+  const keyUpHandler = e => {
+    const val = parseFloat(e.target.value)
+    method(val)
+  }
+
   return(
     <div className='w-full pt-8 mb-2'>
       <div className='relative rounded w-full group overflow-visible' onClick={()=>{inputRef.current.focus()}}>
-        <input type={type} name={title} placeholder=' ' required={required} ref={inputRef}
+        <input type={type} name={title} placeholder=' ' required={required} ref={inputRef} onChange={e=>{keyUpHandler(e)}}
             className='transition-all duration-150 w-full p-4 rounded peer
             outline-none border border-gray-500
             focus:border-blue-500
