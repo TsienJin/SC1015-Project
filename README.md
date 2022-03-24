@@ -2,7 +2,7 @@
 - "Human Stress Detection in and through Sleep" (https://www.kaggle.com/laavanya/human-stress-detection-in-and-through-sleep?select=SaYoPillow.csv)
 - "Stress Analysis" (https://data.world/dataorg1/stress-analysis/workspace/file?filename=Dataset.xlsx)
 
-***Problem Definition based on dataset:***\ 
+***Problem Definition based on dataset:*** \ 
 Using emotions to predict stress levels to predict sleep quality (potentially advising people how to improve their sleep quality)
 
 ***Data cleaning and preparation***\
