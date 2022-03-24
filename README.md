@@ -3,9 +3,11 @@
 - Stress Analysis (https://data.world/dataorg1/stress-analysis/workspace/file?filename=Dataset.xlsx)
 
 ***Problem Definition based on dataset:*** 
+
 Using emotions to predict stress levels to predict sleep quality (potentially advising people how to improve their sleep quality)
 
 ***Data cleaning and preparation***
+
     - We first converted the column of "Body temperature" in the Dataset "Human Stress Detection in and through Sleep" from farenheit, to celsius, so that it is easier for users to understand and input their data.\
     - Since the first dataset, "Human Stress Detection in and through Sleep", have 5 stress levels, namely, 0 - low/normal, 1 – medium low, 2 - medium, 3 - medium high, 4 - high.\
     - On the other hand, for the dataset, "Stress Analysis", have 4 stress levels, namely, 0 - no , 1 - mild, 2 - moderate, 3 - severe.\
