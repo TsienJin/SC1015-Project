@@ -13,7 +13,7 @@ Using emotions to predict stress levels to predict sleep quality (potentially ad
         - 0 - low/normal --> 0 - no\
         - 1 - medium low --> 1 - mild\
         - 2 - medium, 3 - medium high --> 2 - moderate\
-        - 4 - high to 3 --> severe
+        - 4 - high --> 3 - severe
         
 ***Exploratory data analysis/visualization to gather relevant insights***\
     - To prevent overfitting, we used a for loop, to determine the optimal depth of the tree. By plotting a graph of the classification accuracy and the depths of the tree, we are able to find the highest point of the graph, which is depth 8, which have the highest classification accruracy on the testing dataset.\
