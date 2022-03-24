@@ -16,7 +16,7 @@ Using emotions to predict stress levels to predict sleep quality (potentially ad
         - 4 - high --> 3 - severe
         
 ***Exploratory data analysis/visualization to gather relevant insights***\
-    - To prevent overfitting, we used a for loop, to determine the optimal depth of the tree. By plotting a graph of the classification accuracy and the depths of the tree, we are able to find the highest point of the graph, which is depth 8, which have the highest classification accruracy on the testing dataset.\
+    - To prevent overfitting of the decision trees, we used a for loop, to determine the optimal depth of the tree. By plotting a graph of the classification accuracy and the depths of the tree, we are able to find the highest point of the graph, which is depth 8, which have the highest classification accruracy on the testing dataset.\
     - Since the model of SVM on the categorical dataset "Stress Analysis", has the better classification accuracy of 1.0, as comapred to Decision Tree's classification accuracy of 0.79554, we decided to proceed with the SVM model instead of decision trees.\
     - Since now we have the models for both datasets, with the common categorial variable of "Stress Level", we are able to use the emotions, sentiment variables in the dataset "Stress Analysis", to predict the "Stress Level". We then can use that "Stress Level" to predict the quality of sleep, namely the variables "Eye Movement (REM)" and "Sleeping Hours".
 
