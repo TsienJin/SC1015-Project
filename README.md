@@ -17,7 +17,12 @@ Using emotions to predict stress levels to predict sleep quality (potentially ad
     - 0 - low/normal --> 0 - no  
     - 1 - medium low --> 1 - mild  
     - 2 - medium, 3 - medium high --> 2 - moderate  
-    - 4 - high --> 3 - severe
+    - 4 - high --> 3 - severe  
+- We also labeled the "Stress Analysis" dataset, from text to numeric values  
+    - "No": 0
+    - "Mild": 1
+    - "Moderate": 2
+    - "Severe": 3  
         
 ### Exploratory data analysis/visualization to gather relevant insights
 
@@ -29,7 +34,7 @@ Using emotions to predict stress levels to predict sleep quality (potentially ad
 ### Use of machine learning techniques to solve specific problem
 
 - We used Support Vector Machine (SVM), with Radial Basis function kernel, for machine learning of the dataset, "Stress Analysis", since they are all categorical variables. We have a classification accuracy of 1.0.  
-    - We compared four different kernels, namely linear, LIN, RBF, and POLY. After comparing their classification accuracy, we chose ***SVM kernel of Radial Basis Function (RBF)***, since it has the ***highest classification accuracy of 1.0***. Even though the kernel LIN also have classification accuracy of 1.0, we still chose the kernel RBF.  
+    - We compared four different kernels, namely linear, LIN, RBF, and POLY. After comparing their classification accuracy, we chose ***SVM kernel of Linear Function (LIN)***, since it has the ***highest classification accuracy of 1.0***. Even though the kernel RBF also have classification accuracy of 1.0, we still chose the kernel LIN.  
     - It is because linear SVM is a parametric model, an RBF kernel SVM isn't, and the complexity of the latter grows with the size of the training set. Not only is it more expensive to train an RBF kernel SVM, there is also a need to keep the kernel matrix around, and the projection into this "infinite" higher dimensional space where the data becomes linearly separable is more expensive as well during prediction. Furthermore, there are more hyperparameters to tune, so model selection is more expensive. And finally, it's much easier to overfit a complex model! (https://www.kdnuggets.com/2016/06/select-support-vector-machine-kernels.html#:~:text=Linear%20SVM%20is%20a%20parametric,size%20of%20the%20training%20set)  
 - We also tried using Decision Trees, by splitting the "Stress Analysis" dataset into 80% training dataset, and 20% testing dataset. We then use Decision Tree to model based on the training dataset, then tested it on the testing dataset to get the classification accuracy.  By getting the optimal depth using a for loop, we obtained the ***optimal depth of 8***, which have a ***classification accuracy of about 0.79554***.  
 - We used linear regression on the dataset "Human Stress Detection in and through Sleep", so that we are able to use "***Stress Level***" to predict factors that affect sleep quality, which are "***Eye Movement (REM)***:, and "***Sleeping Hours***". [NEED TO JUSTIFY WHY]  
