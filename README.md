@@ -18,7 +18,8 @@ Using emotions to predict stress levels to predict sleep quality (potentially ad
     - 1 - medium low --> 1 - mild  
     - 2 - medium, 3 - medium high --> 2 - moderate  
     - 4 - high --> 3 - severe  
-- We also labeled the "Stress Analysis" dataset, from text to numeric values  
+- Both above are done in ("Human Stress Detection in and through Sleep" EDA.ipynb)
+- We also labeled the "Stress Analysis" dataset, from text to numeric values (in ML/Classification.ipynb)  
     - "No": 0
     - "Mild": 1
     - "Moderate": 2
