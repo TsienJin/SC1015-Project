@@ -14,11 +14,7 @@ Analysing emotions to catagorize stress levels to predict sleep quality (potenti
 
 We first converted the column of "Body temperature" in the Dataset "Human Stress Detection in and through Sleep" ***from farenheit, to celsius***, so that it is easier for users to understand and input their data.
 
-
-
-![Converting farenheight to celsius.](https://i.imgur.com/xkq3Npp.png)
-
-
+<img title="" src="https://i.imgur.com/xkq3Npp.png" alt="Converting farenheight to celsius." data-align="center" width="392">
 
 - Since the first dataset, "Human Stress Detection in and through Sleep", have ***5 stress levels***, namely, ***0 - low/normal, 1 – medium low, 2 - medium, 3 - medium high, 4 - high***.  
 - On the other hand, for the dataset, "Stress Analysis", have ***4 stress levels***, namely, ***0 - no , 1 - mild, 2 - moderate, 3 - severe***.  
