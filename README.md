@@ -16,11 +16,9 @@ We first converted the column of *Body temperature* in the Dataset *Human Stress
 
 <img title="" src="https://i.imgur.com/xkq3Npp.png" alt="Converting farenheight to celsius." data-align="inline" width="392">
 
-
-
 ### Relableing data
 
-Since the first dataset, "Human Stress Detection in and through Sleep", have ***5 stress levels***. 
+The dataset, "Human Stress Detection in and through Sleep", has ***5 stress levels***. 
 
 - 0 - low/normal
 
@@ -42,8 +40,6 @@ On the other hand, for the dataset, "Stress Analysis", have ***4 stress levels**
 
 - 3 - severe
 
-
-
 Thus, by suitability, we relabelled the stress levels of the dataset "Human Stress Detection in and through Sleep" from 5 levels of stress to 4 levels of stress, so as to be able to compare with the "Stress Analysis" dataset. For the dataset "Human Stress Detection in and through Sleep", We re-categorised:  
 
 - 0 - low/normal --> 0 - no  
@@ -54,10 +50,6 @@ Thus, by suitability, we relabelled the stress levels of the dataset "Human Stre
 
 - 4 - high --> 3 - severe  
 
-- Both above are done in ("Human Stress Detection in and through Sleep" EDA.ipynb)
-
-
-
 We also labeled the *Stress Analysis* dataset, from text to numeric values (in ML/Classification.ipynb)
 
 - "No": 0
@@ -65,17 +57,23 @@ We also labeled the *Stress Analysis* dataset, from text to numeric values (in M
 - "Moderate": 2
 - "Severe": 3
 
-
-
-### Exploratory data analysis/visualization to gather relevant insights
-
-
+### Choosing the best model
 
 ###### Classicification Tree
 
 To prevent overfitting of the decision trees, we iterated over a range of values to determine the optimal depth of the tree. By plotting a graph of the classification accuracy and the depths of the tree, we are able to find the highest point of the graph, which is ***depth 8***, which have the ***highest classification accruracy*** on the testing dataset as depicted in the graph below.
 
 <img title="" src="https://i.imgur.com/Rnbv8MI.png" alt="Accuracy agaisnt varying depth of claddification tree." width="393">
+
+
+
+`Breakdown of classification tree here`
+
+> 1. Justify why tree not very good (Drawbacks and limitations)
+> 
+> 2. Find somewhere to insert descision tree
+
+
 
 
 
@@ -91,8 +89,6 @@ We compared 4 types of SVM models found in [scikit learn](https://scikit-learn.o
 
 - SVC with poly kernel `sklearn.svm.SVC(kernel="poly", degree=4, gamma='auto')`
 
-
-
 The data is split into test and train dataframes, with 20% of the data being used as test data.
 
 ```python
@@ -106,13 +102,41 @@ We plotted a bargraph to see the classification accuracy of different SVM kernel
 
 
 
+`Limits of SVM (TJ)`
+
+> 1. Why linear SVM is not as accurate as linear kernal.
+>    
+>    1. Explain how the results are predicted (process).
+>    
+>    2. Justify difference in linear kernal and linear SVM.
+
+
+
+`Comparing SVM kernals (YZ)`
+
+> 1. Strength of linear kernal
+> 
+> 2. Why RBF kernal is good (also explain briefly what is RBF kernal)
+
+
+
+`Limits of SVM poly kernal (XH)`
+
+> 1. Why poly kernal has significantly lower accuracy.
+> 
+> 2. Why poly kernal is not suitable for our dataset.
+
+
+
+
+
+`Why SVM`
+
+> 1. Justify why SVM (and which model) is better over classification tree
+
 Since the model of SVM on the categorical dataset "Stress Analysis", has the better classification accuracy of `1.0`, as comapred to Decision Tree's classification accuracy of `0.79554`, we decided to proceed with the SVM model instead of decision trees.  
 
 `Since now we have the models for both datasets, with the common categorial variable of "Stress Level", we are able to use the emotions, sentiment variables in the dataset "Stress Analysis", to predict the "Stress Level". We then can use that "***Stress Level***" to predict the quality of sleep, namely the variables "***Eye Movement (REM)***" and "***Sleeping Hours***".`
-
-
-
-
 
 # Use of machine learning techniques to solve specific problem
 
