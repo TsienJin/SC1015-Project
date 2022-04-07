@@ -14,7 +14,9 @@ Analysing emotions to catagorize stress levels to predict sleep quality (potenti
 
 We first converted the column of "Body temperature" in the Dataset "Human Stress Detection in and through Sleep" ***from farenheit, to celsius***, so that it is easier for users to understand and input their data.
 
-![](/Users/tjay/Dropbox/NTU/Y1S2/SC1015/SC1015-Project/src_img/EDA/Screenshot%202022-04-07%20at%2012.56.57.png)
+
+
+![Converting farenheight to celsius.](https://i.imgur.com/xkq3Npp.png)
 
 
 
