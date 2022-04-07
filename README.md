@@ -10,19 +10,43 @@ Analysing emotions to catagorize stress levels to predict sleep quality (potenti
 
 # Data cleaning and preparation
 
-## Cleaning `Human Stress Detection in and through sleep` Dataset
-
 We first converted the column of "Body temperature" in the Dataset "Human Stress Detection in and through Sleep" ***from farenheit, to celsius***, so that it is easier for users to understand and input their data.
 
 <img title="" src="https://i.imgur.com/xkq3Npp.png" alt="Converting farenheight to celsius." data-align="center" width="392">
 
-- Since the first dataset, "Human Stress Detection in and through Sleep", have ***5 stress levels***, namely, ***0 - low/normal, 1 – medium low, 2 - medium, 3 - medium high, 4 - high***.  
-- On the other hand, for the dataset, "Stress Analysis", have ***4 stress levels***, namely, ***0 - no , 1 - mild, 2 - moderate, 3 - severe***.  
-- Thus, by suitability, we relabelled the stress levels of the dataset "Human Stress Detection in and through Sleep" from 5 levels of stress to 4 levels of stress, so as to be able to compare with the "Stress Analysis" dataset. For the dataset "Human Stress Detection in and through Sleep", We re-categorised:  
-  - 0 - low/normal --> 0 - no  
-  - 1 - medium low --> 1 - mild  
-  - 2 - medium, 3 - medium high --> 2 - moderate  
-  - 4 - high --> 3 - severe  
+Since the first dataset, "Human Stress Detection in and through Sleep", have ***5 stress levels***. 
+
+- 0 - low/normal
+
+- 1 – medium low,
+
+- 2 - medium
+
+- 3 - medium high
+
+- 4 - high  
+
+
+
+On the other hand, for the dataset, "Stress Analysis", have ***4 stress levels***.
+
+- 0 - no
+
+- 1 - mild
+
+- 2 - moderate
+
+- 3 - severe
+
+
+
+Thus, by suitability, we relabelled the stress levels of the dataset "Human Stress Detection in and through Sleep" from 5 levels of stress to 4 levels of stress, so as to be able to compare with the "Stress Analysis" dataset. For the dataset "Human Stress Detection in and through Sleep", We re-categorised:  
+
+- 0 - low/normal --> 0 - no  
+- 1 - medium low --> 1 - mild  
+- 2 - medium, 3 - medium high --> 2 - moderate  
+- 4 - high --> 3 - severe  
+
 - Both above are done in ("Human Stress Detection in and through Sleep" EDA.ipynb)
 - We also labeled the "Stress Analysis" dataset, from text to numeric values (in ML/Classification.ipynb)  
   - "No": 0
