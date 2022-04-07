@@ -52,7 +52,8 @@ We first converted the column of "Body temperature" in the Dataset "Human Stress
 ### Phone app to allow users to key in their easily obtained data to get stress level
 - Easily obtained data would be "sleeping hours (sr.1)", "body temperature (t)", "blood oxygen (bo)", "heart rate (hr)"
     - We chose these 4 factors as they are easier to obtain as compared to the other factors due to the technology devices available today
-
+- After keying their numeric data into the app, they will be able to get their approximate stress level, together with the remaining sleeping data which may not be easily available for them previously   
+    - The remaining sleep data which are not easily obtainable will be "Snoring rate (sr)", "Respiration rate (rr)", "Limb movement (lm)", "Eye movement (rem)"  
 
 ## References  
 - https://www.kdnuggets.com/2016/06/select-support-vector-machine-kernels.html#:~:text=Linear%20SVM%20is%20a%20parametric,size%20of%20the%20training%20set
