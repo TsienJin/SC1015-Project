@@ -4,19 +4,19 @@
 
 - [Human Stress Detection in and through Sleep | Kaggle](https://www.kaggle.com/laavanya/human-stress-detection-in-and-through-sleep?select=SaYoPillow.csv)
 
-
-
 # Problem Definition based on dataset:
 
 Analysing emotions to catagorize stress levels to predict sleep quality (potentially advising people how to improve their sleep quality).
-
-
 
 # Data cleaning and preparation
 
 ## Cleaning `Human Stress Detection in and through sleep` Dataset
 
-We first converted the column of "Body temperature" in the Dataset "Human Stress Detection in and through Sleep" ***from farenheit, to celsius***, so that it is easier for users to understand and input their data.  
+We first converted the column of "Body temperature" in the Dataset "Human Stress Detection in and through Sleep" ***from farenheit, to celsius***, so that it is easier for users to understand and input their data.
+
+![](/Users/tjay/Dropbox/NTU/Y1S2/SC1015/SC1015-Project/src_img/EDA/Screenshot%202022-04-07%20at%2012.56.57.png)
+
+
 
 - Since the first dataset, "Human Stress Detection in and through Sleep", have ***5 stress levels***, namely, ***0 - low/normal, 1 – medium low, 2 - medium, 3 - medium high, 4 - high***.  
 - On the other hand, for the dataset, "Stress Analysis", have ***4 stress levels***, namely, ***0 - no , 1 - mild, 2 - moderate, 3 - severe***.  
@@ -43,6 +43,6 @@ We first converted the column of "Body temperature" in the Dataset "Human Stress
 
 - We used Support Vector Machine (SVM), with Radial Basis function kernel, for machine learning of the dataset, "Stress Analysis", since they are all categorical variables. We have a classification accuracy of 1.0.  
   - We compared four different kernels, namely linear, LIN, RBF, and POLY. After comparing their classification accuracy, we chose ***SVM kernel of Linear Function (LIN)***, since it has the ***highest classification accuracy of 1.0***. Even though the kernel RBF also have classification accuracy of 1.0, we still chose the kernel LIN.  
-  - It is because linear SVM is a parametric model, an RBF kernel SVM isn't, and the complexity of the latter grows with the size of the training set. Not only is it more expensive to train an RBF kernel SVM, there is also a need to keep the kernel matrix around, and the projection into this "infinite" higher dimensional space where the data becomes linearly separable is more expensive as well during prediction. Furthermore, there are more hyperparameters to tune, so model selection is more expensive. And finally, it's much easier to overfit a complex model! (https://www.kdnuggets.com/2016/06/select-support-vector-machine-kernels.html#:~:text=Linear%20SVM%20is%20a%20parametric,size%20of%20the%20training%20set)  
+  - It is because linear SVM is a parametric model, an RBF kernel SVM isn't, and the complexity of the latter grows with the size of the training set. Not only is it more expensive to train an RBF kernel SVM, there is also a need to keep the kernel matrix around, and the projection into this "infinite" higher dimensional space where the data becomes linearly separable is more expensive as well during prediction. Furthermore, there are more hyperparameters to tune, so model selection is more expensive. And finally, it's much [easier to overfit a complex model]([How to Select Support Vector Machine Kernels - KDnuggets](https://www.kdnuggets.com/2016/06/select-support-vector-machine-kernels.html#:~:text=Linear%20SVM%20is%20a%20parametric,size%20of%20the%20training%20set))! 
 - We also tried using Decision Trees, by splitting the "Stress Analysis" dataset into 80% training dataset, and 20% testing dataset. We then use Decision Tree to model based on the training dataset, then tested it on the testing dataset to get the classification accuracy.  By getting the optimal depth using a for loop, we obtained the ***optimal depth of 8***, which have a ***classification accuracy of about 0.79554***.  
 - We used linear regression on the dataset "Human Stress Detection in and through Sleep", so that we are able to use "***Stress Level***" to predict factors that affect sleep quality, which are "***Eye Movement (REM)***:, and "***Sleeping Hours***". [NEED TO JUSTIFY WHY]  
