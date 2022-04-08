@@ -50,7 +50,7 @@ Thus, by suitability, we relabelled the stress levels of the dataset "Human Stre
 
 - 4 - high --> 3 - severe  
 
-We also labeled the *Stress Analysis* dataset, from text to numeric values (in ML/Classification.ipynb)
+We also labeled the *Stress Analysis* dataset, from text to numeric values (in ML/Classification.ipynb).
 
 - "No": 0
 - "Mild": 1
@@ -65,17 +65,11 @@ To prevent overfitting of the decision trees, we iterated over a range of values
 
 <img title="" src="https://i.imgur.com/Rnbv8MI.png" alt="Accuracy agaisnt varying depth of claddification tree." width="393">
 
-
-
 `Breakdown of classification tree here`
 
 > 1. Justify why tree not very good (Drawbacks and limitations)
 > 
 > 2. Find somewhere to insert descision tree
-
-
-
-
 
 ###### Support Vector Machine
 
@@ -100,15 +94,19 @@ We plotted a bargraph to see the classification accuracy of different SVM kernel
 
 <img src="https://i.imgur.com/T9WluYB.png" title="" alt="Graph of accuracy agaisnt type of SVM" width="419">
 
-
-
 `Limits of SVM (TJ)`
 
 > 1. Why linear SVM is not as accurate as linear kernal.
 >    
 >    1. Explain how the results are predicted (process).
 >    
->    2. Justify difference in linear kernal and linear SVM.
+>    2. Justify [difference](https://stackoverflow.com/questions/45384185/what-is-the-difference-between-linearsvc-and-svckernel-linear) in linear kernal and linear SVM.
+
+
+
+### Comparing Linear SVC and SVC with linear kernal
+
+
 
 
 
@@ -118,17 +116,11 @@ We plotted a bargraph to see the classification accuracy of different SVM kernel
 > 
 > 2. Why RBF kernal is good (also explain briefly what is RBF kernal)
 
-
-
 `Limits of SVM poly kernal (XH)`
 
 > 1. Why poly kernal has significantly lower accuracy.
 > 
 > 2. Why poly kernal is not suitable for our dataset.
-
-
-
-
 
 `Why SVM`
 
@@ -160,6 +152,7 @@ Since the model of SVM on the categorical dataset "Stress Analysis", has the bet
 
 ## References
 
-- https://www.kdnuggets.com/2016/06/select-support-vector-machine-kernels.html#:~:text=Linear%20SVM%20is%20a%20parametric,size%20of%20the%20training%20set
-- https://github.com/artikwh/K-Means-Clustering-Arti-Kushwaha/blob/main/K_Means_Clusteing_Arti_Kushwaha.ipynb  
-- https://www.freecodecamp.org/news/how-to-build-and-train-k-nearest-neighbors-ml-models-in-python/  
+- [How to Build and Train K-Nearest Neighbors and K-Means Clustering ML Models in Python](https://www.freecodecamp.org/news/how-to-build-and-train-k-nearest-neighbors-ml-models-in-python/)
+- [scikit learn - What is the difference between LinearSVC and SVC(kernel=&quot;linear&quot;)? - Stack Overflow](https://stackoverflow.com/questions/45384185/what-is-the-difference-between-linearsvc-and-svckernel-linear)
+- [How to Select Support Vector Machine Kernels - KDnuggets](https://www.kdnuggets.com/2016/06/select-support-vector-machine-kernels.html#:~:text=Linear%20SVM%20is%20a%20parametric,size%20of%20the%20training%20set)
+- [K-Means-Clustering-Arti-Kushwaha/K_Means_Clusteing_Arti_Kushwaha.ipynb at main · artikwh/K-Means-Clustering-Arti-Kushwaha · GitHub](https://github.com/artikwh/K-Means-Clustering-Arti-Kushwaha/blob/main/K_Means_Clusteing_Arti_Kushwaha.ipynb)
