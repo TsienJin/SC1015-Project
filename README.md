@@ -102,36 +102,32 @@ We plotted a bargraph to see the classification accuracy of different SVM kernel
 >    
 >    2. Justify [difference](https://stackoverflow.com/questions/45384185/what-is-the-difference-between-linearsvc-and-svckernel-linear) in linear kernal and linear SVM.
 
-
-
 ### Support Vector Machine as Classifiers
 
 Support Vector Machines (SVM) form hyper-planes or a set of hyper-planes in an infinite dimensional space to classify data points into labled subspaces.
-
-
 
 <img src="https://scikit-learn.org/stable/_images/sphx_glr_plot_separating_hyperplane_001.png" title="" alt="Visualisation of a hyper-plane" width="347">
 
 *Example of a hyper-plane in a 2 dimension space. (Scikit-learn, n.d.)*
 
-
-
 The SVM model uses a cost-minimizing function while maximizing the distance between the hyper-plane and the support vectors to acheive a classification model with high accuracy (Scikit-learn, n.d.).
 
+### Comparing Linear SVC and SVC with linear kernel
 
-
-### Comparing Linear SVC and SVC with linear kernal
-
-These two models perform classification from different approaches, where `LinearSVC` minimizes the squared hinge loss (E. Z., 2017), while `SVC` with `kernal=linear` maximises the margin between classifications (Scikit-learn, n.d.).
+These two models perform classification from different approaches, where `LinearSVC` minimizes the squared hinge loss (E. Z., 2017), while `SVC` with `kernel=linear` maximises the margin between classifications (Scikit-learn, n.d.).
 
 - `LinearSVC` --<u> Squared Hinge Loss</u> incurs cost on data points that are *easy to identify*. This occurs when the data points are within the region of correct classification, but is too far away from the support vector (Veen B. V., 2020).
 - `SVC` -- <u>Maximizing margin</u> and incurring a penalty for misclassification is also a form of a hinge loss cost function. However, specific to `SVC`, the cost function has an allowable distance between some samples and the margin boundary (Scikit-learn, n.d.). This in turn allows for an acceptable range of error that can facilitate higher accuracy in classification.
 
-
-
-### Difference in classification accuracy between Linear SVC and SVC with linear kernal
+### Difference in classification accuracy between Linear SVC and SVC with linear kernel
 
 The dataset used has only 4 distinct values for each data point. This results in a high probabilty of misclassification. `SVC`'s allowable margin for error accomodates for this through its provision of an acceptable range of error, in turn resulting in a noticably higher accuracy of `1.0` as compared to that of `LinearSVC`.
+
+
+
+
+
+
 
 
 
