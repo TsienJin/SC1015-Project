@@ -104,9 +104,34 @@ We plotted a bargraph to see the classification accuracy of different SVM kernel
 
 
 
+### Support Vector Machine as Classifiers
+
+Support Vector Machines (SVM) form hyper-planes or a set of hyper-planes in an infinite dimensional space to classify data points into labled subspaces.
+
+
+
+<img src="https://scikit-learn.org/stable/_images/sphx_glr_plot_separating_hyperplane_001.png" title="" alt="Visualisation of a hyper-plane" width="347">
+
+*Example of a hyper-plane in a 2 dimension space. (Scikit-learn, n.d.)*
+
+
+
+The SVM model uses a cost-minimizing function while maximizing the distance between the hyper-plane and the support vectors to acheive a classification model with high accuracy (Scikit-learn, n.d.).
+
+
+
 ### Comparing Linear SVC and SVC with linear kernal
 
+These two models perform classification from different approaches, where `LinearSVC` minimizes the squared hinge loss (E. Z., 2017), while `SVC` with `kernal=linear` maximises the margin between classifications (Scikit-learn, n.d.).
 
+- `LinearSVC` --<u> Squared Hinge Loss</u> incurs cost on data points that are *easy to identify*. This occurs when the data points are within the region of correct classification, but is too far away from the support vector (Veen B. V., 2020).
+- `SVC` -- <u>Maximizing margin</u> and incurring a penalty for misclassification is also a form of a hinge loss cost function. However, specific to `SVC`, the cost function has an allowable distance between some samples and the margin boundary (Scikit-learn, n.d.). This in turn allows for an acceptable range of error that can facilitate higher accuracy in classification.
+
+
+
+### Difference in classification accuracy between Linear SVC and SVC with linear kernal
+
+The dataset used has only 4 distinct values for each data point. This results in a high probabilty of misclassification. `SVC`'s allowable margin for error accomodates for this through its provision of an acceptable range of error, in turn resulting in a noticably higher accuracy of `1.0` as compared to that of `LinearSVC`.
 
 
 
@@ -154,5 +179,8 @@ Since the model of SVM on the categorical dataset "Stress Analysis", has the bet
 
 - [How to Build and Train K-Nearest Neighbors and K-Means Clustering ML Models in Python](https://www.freecodecamp.org/news/how-to-build-and-train-k-nearest-neighbors-ml-models-in-python/)
 - [scikit learn - What is the difference between LinearSVC and SVC(kernel=&quot;linear&quot;)? - Stack Overflow](https://stackoverflow.com/questions/45384185/what-is-the-difference-between-linearsvc-and-svckernel-linear)
+- [1.4. Support Vector Machines &mdash; scikit-learn 1.0.2 documentation](https://scikit-learn.org/stable/modules/svm.html#mathematical-formulation)
+- [A definitive explanation to the Hinge Loss for Support Vector Machines - Towards Data Science](https://towardsdatascience.com/a-definitive-explanation-to-hinge-loss-for-support-vector-machines-ab6d8d3178f1)
+- [Hinge Loss for Binary Classifiers - YouTube](https://www.youtube.com/watch?v=PM2MSAYmzXM)
 - [How to Select Support Vector Machine Kernels - KDnuggets](https://www.kdnuggets.com/2016/06/select-support-vector-machine-kernels.html#:~:text=Linear%20SVM%20is%20a%20parametric,size%20of%20the%20training%20set)
-- [K-Means-Clustering-Arti-Kushwaha/K_Means_Clusteing_Arti_Kushwaha.ipynb at main · artikwh/K-Means-Clustering-Arti-Kushwaha · GitHub](https://github.com/artikwh/K-Means-Clustering-Arti-Kushwaha/blob/main/K_Means_Clusteing_Arti_Kushwaha.ipynb)
+- [K-Means-Clustering-Arti-Kushwaha/K_Means_Clusteing_Arti_Kushwaha.ipynb at main · artikwh/K-Means-Clustering-Arti-Kushwaha · GitHub](https://github.com/artikwh/K-Means-Clustering-Arti-Kushwaha/blob/main/K_Means_Clusteing_Arti_Kushwaha.ipynb) 
