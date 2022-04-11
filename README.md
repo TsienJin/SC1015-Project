@@ -71,6 +71,12 @@ To prevent overfitting of the decision trees, we iterated over a range of values
 > 
 > 2. Find somewhere to insert descision tree
 
+### Why decision trees may not be the optimal model
+
+Decision trees only takes into account one variable at every decision stage, may would result in a lower accuracy rating as we only consider a single variable to make our classification decision (splitting of the data set) instead of taking all the variables at once. 
+
+Each decision in the decision tree can be viewed as an individual IF-ELSE statement. Hence, each only only can go 2 ways (True or False), this is not applicable to our data sets since we are using more than 2 distinct levels of classification (there are 4 levels of stress).
+
 ###### Support Vector Machine
 
 We compared 4 types of SVM models found in [scikit learn](https://scikit-learn.org/stable/modules/svm.html).
@@ -136,6 +142,12 @@ The dataset used has only 4 distinct values for each data point. This results in
 > 1. Strength of linear kernal
 > 
 > 2. Why RBF kernal is good (also explain briefly what is RBF kernal)
+
+### Why RBF kernal is good
+
+Radial Basis Function (RBF) kernel is one of the default kernel used with the sklearn's SVM classification algorithm. It can be described using the following formula: insert formula here 
+
+The gamma of the model is a scalar that defines how much influence a single training point has. The larger gamma is, the closer other points must be to affect the model. Using RBF we can set the gamma manually and control individual points' influence on the overall algorithm and model. This allows us to manipulate how much we want each variable to influence the classification process. (Less significant variables can be given a larger gamma while more significant variables can be given a lower gamma, note that gamma must always be more than zero)
 
 `Limits of SVM poly kernal (XH)`
 
