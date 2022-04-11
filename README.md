@@ -153,7 +153,7 @@ Since for our model, we only used the degree of `4` and c of `1.0`, it may not b
 
 <img src="https://i.imgur.com/Z52TQIQ.png" title="" alt="Polynomial Kernel Definition" width="419">  
 
-With the parameter of `degree` relating to `b`, and `coef0` relating to `a`, by varying these parameters will change the polynomial function and thus lead to different higher dimension relationships between the two variables. There is no shortcut for us to choose the best parameters and we will need to try over a range of values to be able to find the best value for `degree`, `c` and `coef0`. However, the time complexity for such operation will be $x^3$ as we have to vary 3 parameters. It will be both time and space consuming and thus not feasible to do so.  
+With the parameter of `degree` relating to `b`, and `coef0` relating to `a`, by varying these parameters will change the polynomial function and thus lead to different higher dimension relationships between the two variables. There is no shortcut for us to choose the best parameters and we will need to try over a range of values to be able to find the best value for `degree`, `c` and `coef0`. However, the time complexity for such operation will be $x^{3}$ as we have to vary 3 parameters. It will be both time and space consuming and thus not feasible to do so.  
 
 
 Since the model of SVM on the categorical dataset "Stress Analysis", has the better classification accuracy of `1.0`, as comapred to Decision Tree's classification accuracy of `0.79554`, we decided to proceed with the SVM model instead of decision trees.  
