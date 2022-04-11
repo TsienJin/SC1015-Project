@@ -151,7 +151,7 @@ The dataset used has only 4 distinct values for each data point. This results in
 
 Since for our model, we only used the degree of `4` and c of `1.0`, it may not be the best values to be used for our polynomial kernel. We also did not specify the coef0 parameter. It is because the polynomial kernel is defined as:  
 
-<img src="https://imgur.com/a/KUuQqrE.png" title="" alt="Polynomial Kernel Definition" width="419">  
+<img src="https://imgur.com/a/KUuQqrE" title="" alt="Polynomial Kernel Definition" width="419">  
 
 With the parameter of degree relating to 'b', and coef0 relating to 'a', by varying these parameters will change the polynomial function and thus lead to different higher dimension relationships between the two variables. There is no shortcut for us to choose the best parameters and we will need to try over a range of values to be able to find the best value for 'degree', 'c' and 'coef0'. However, the time complexity for such operation will be x^3 as we have to vary 3 parameters. It will be both time and space consuming and thus not feasible to do so.  
 
