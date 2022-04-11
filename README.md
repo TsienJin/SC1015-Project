@@ -10,7 +10,7 @@ Analysing emotions to catagorize stress levels to predict sleep quality (potenti
 
 # Data cleaning and preparation
 
-### Changing units for termperature
+### Changing units for temperature
 
 We first converted the column of *Body temperature* in the Dataset *Human Stress Detection in and through Sleep* from <u>farenheit</u> to <u>celsius</u>, so that it is easier for users to understand and input their data.
 
@@ -142,6 +142,12 @@ The dataset used has only 4 distinct values for each data point. This results in
 > 1. Strength of linear kernal
 > 
 > 2. Why RBF kernal is good (also explain briefly what is RBF kernal)
+
+### strength of linear kernel
+
+Training a SVM with linear = kernel is much faster than with other kernels. This is because when training a SVM with a linear kernel, only the optimisation of the C regularisation parameter is required. The c regularisation parameter tells the SVM optimization how much you want to avoid misclassifying each training point. For larger values of C, the optimization will choose a smaller margin hyperplane. For small values of C, the optimizer will look for larger-margin separating hyperplane, even if that hyperplane misclassifies more points.
+
+Also, SVM with linear kernel is one of the simplest classifiers which leads to higher performance accuracy and lower cost in the long run.
 
 ### Why RBF kernal is good
 
