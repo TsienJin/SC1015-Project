@@ -151,7 +151,7 @@ The dataset used has only 4 distinct values for each data point. This results in
 
 Since for our model, we only used the degree of `4` and c of `1.0`, it may not be the best values to be used for our polynomial kernel. We also did not specify the coef0 parameter. It is because the polynomial kernel is defined as:  
 
-<img src="https://imgur.com/a/KUuQqrE" title="" alt="Polynomial Kernel Definition" width="419">  
+<img src="https://imgur.com/a/KUuQqrE.png" title="" alt="Polynomial Kernel Definition" width="419">  
 
 With the parameter of degree relating to 'b', and coef0 relating to 'a', by varying these parameters will change the polynomial function and thus lead to different higher dimension relationships between the two variables. There is no shortcut for us to choose the best parameters and we will need to try over a range of values to be able to find the best value for 'degree', 'c' and 'coef0'. However, the time complexity for such operation will be x^3 as we have to vary 3 parameters. It will be both time and space consuming and thus not feasible to do so.  
 
@@ -190,3 +190,4 @@ Since the model of SVM on the categorical dataset "Stress Analysis", has the bet
 - [How to Select Support Vector Machine Kernels - KDnuggets](https://www.kdnuggets.com/2016/06/select-support-vector-machine-kernels.html#:~:text=Linear%20SVM%20is%20a%20parametric,size%20of%20the%20training%20set)
 - [K-Means-Clustering-Arti-Kushwaha/K_Means_Clusteing_Arti_Kushwaha.ipynb at main · artikwh/K-Means-Clustering-Arti-Kushwaha · GitHub](https://github.com/artikwh/K-Means-Clustering-Arti-Kushwaha/blob/main/K_Means_Clusteing_Arti_Kushwaha.ipynb) 
 - [Support Vector Machines Part 2: The Polynomial Kernel (Part 2 of 3)](https://www.youtube.com/watch?v=Toet3EiSFcM)
+- [SUPPORT VECTOR MACHINES(SVM)](https://towardsdatascience.com/support-vector-machines-svm-c9ef22815589#:~:text=Polynomial%20kernel%3A,the%20power%20of%20the%20kernel.&text=In%20order%20to%20solve%20the,\)%20Za%20%5Et%20and%20Zb)
