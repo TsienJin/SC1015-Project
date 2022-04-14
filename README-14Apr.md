@@ -213,7 +213,7 @@ Since the model of SVM on the categorical dataset "Stress Analysis", has the bet
 - Easily obtained data would be "sleeping hours (sr.1)", "body temperature (t)", "blood oxygen (bo)", "heart rate (hr)"
   - We chose these 4 factors as they are easier to obtain as compared to the other factors due to the technology devices available today
 - After keying their numeric data into the app, they will be able to get their approximate stress level, together with the remaining sleeping data which may not be easily available for them previously   
-- The remaining sleep data which are not easily obtainable will be `"Snoring rate (sr)", "Respiration rate (rr)", "Limb movement (lm)", "Eye movement (rem)"`   
+  - The remaining sleep data which are not easily obtainable will be "Snoring rate (sr)", "Respiration rate (rr)", "Limb movement (lm)", "Eye movement (rem)"  
 
 ## References
 
