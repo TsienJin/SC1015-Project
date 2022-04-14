@@ -200,11 +200,11 @@ Since the model of SVM on the categorical dataset "Stress Analysis", has the bet
 - We then did linear regression on the "Sleep Analysis" dataset, using "Stress Level (sl)" to predict "Eye Movement (rem)" and "Sleeping Hours (sr.1)"
 - Then by getting the stress level predicted using emotions, we can then predict the values of "Eye Movement (rem)" and "Sleeping Hours (sr.1)"
 
-<img src="https://i.imgur.com/0cjn0Jo.png" title="" alt="Linear regression code" width="419">
-<img src="https://i.imgur.com/YCQZYh8.png" title="" alt="Predicting REM using stress level" width="419">
-<img src="https://i.imgur.com/Z9LV4mM.png" title="" alt="Linear regression line for REM using stress level" width="500">
-<img src="https://i.imgur.com/JXd93wQ.png" title="" alt="Predicting sleep hours using stress level" width="419">
-<img src="https://i.imgur.com/yjE1ZZr.png" title="" alt="Linear regression line for REM using stress level" width="500">
+<img src="https://i.imgur.com/0cjn0Jo.png" title="" alt="Linear regression code" width="600">
+<img src="https://i.imgur.com/YCQZYh8.png" title="" alt="Predicting REM using stress level" width="600">
+<img src="https://i.imgur.com/Z9LV4mM.png" title="" alt="Linear regression line for REM using stress level" width="600">
+<img src="https://i.imgur.com/JXd93wQ.png" title="" alt="Predicting sleep hours using stress level" width="600">
+<img src="https://i.imgur.com/yjE1ZZr.png" title="" alt="Linear regression line for REM using stress level" width="600">
 
 ## Sub-topic 2: How can we use numeric sleeping data to predict stress level if emotions are unavailable
 
