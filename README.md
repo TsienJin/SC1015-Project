@@ -145,7 +145,7 @@ Training a SVM with linear = kernel is much faster than with other kernels. This
 
 Formula for gamma:
 
-<img src="https://imgur.com/a/7srryOH" title="" alt="Gamma formula" width="419">
+<img src="https://i.imgur.com/qQkubCH.png" title="" alt="Gamma formula" width="419">
 
 Also, SVM with linear kernel is one of the simplest classifiers which leads to higher performance accuracy and lower cost in the long run.
 
