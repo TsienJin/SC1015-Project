@@ -59,7 +59,7 @@ We also labeled the *Stress Analysis* dataset, from text to numeric values (in M
 
 ### Choosing the best model
 
-###### Classicification Tree
+###### Classification Tree
 
 To prevent overfitting of the decision trees, we iterated over a range of values to determine the optimal depth of the tree. By plotting a graph of the classification accuracy and the depths of the tree, we are able to find the highest point of the graph, which is ***depth 8***, which have the ***highest classification accruracy*** on the testing dataset as depicted in the graph below.
 
@@ -76,6 +76,8 @@ To prevent overfitting of the decision trees, we iterated over a range of values
 Decision trees only takes into account one variable at every decision stage, may would result in a lower accuracy rating as we only consider a single variable to make our classification decision (splitting of the data set) instead of taking all the variables at once. 
 
 Each decision in the decision tree can be viewed as an individual IF-ELSE statement. Hence, each only only can go 2 ways (True or False), this is not applicable to our data sets since we are using more than 2 distinct levels of classification (there are 4 levels of stress).
+
+The tree may grow to be very complicated with complicated data set like ours (8 different variables to predict 1 variable) and be prone to overfitting in the process of building a larger tree to achieve higher purity.
 
 ###### Support Vector Machine
 
