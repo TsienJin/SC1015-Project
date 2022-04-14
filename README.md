@@ -231,4 +231,5 @@ Since the model of SVM on the categorical dataset "Stress Analysis", has the bet
 - [Support Vector Machines Part 2: The Polynomial Kernel (Part 2 of 3)](https://www.youtube.com/watch?v=Toet3EiSFcM)
 - [SUPPORT VECTOR MACHINES(SVM)](https://towardsdatascience.com/support-vector-machines-svm-c9ef22815589#:~:text=Polynomial%20kernel%3A,the%20power%20of%20the%20kernel.&text=In%20order%20to%20solve%20the,\)%20Za%20%5Et%20and%20Zb)
 - [How to Select Support Vector Machine Kernels](https://www.kdnuggets.com/2016/06/select-support-vector-machine-kernels.html)
-- [creating-linear-kernel-svm-in-python](https://www.geeksforgeeks.org/creating-linear-kernel-svm-in-python/)
+- [creating linear kernel svm in python](https://www.geeksforgeeks.org/creating-linear-kernel-svm-in-python/)
+- [SVM classifier and RBF kernel how to make better models in python](https://towardsdatascience.com/svm-classifier-and-rbf-kernel-how-to-make-better-models-in-python-73bb4914af5b#:~:text=Radial%20Basis%20Function%20(RBF)%20kernel%20and%20Python%20examples,and%20has%20to%20be%20%3E0.)
