@@ -193,7 +193,14 @@ Since the model of SVM on the categorical dataset "Stress Analysis", has the bet
 - It is because linear SVM is a parametric model, and RBF kernel SVM isn't, and the complexity of the latter grows with the size of the training set. Not only is it more expensive to train an RBF kernel SVM, there is also a need to keep the kernel matrix around, and the projection into this "infinite" higher dimensional space where the data becomes linearly separable is more expensive as well during prediction. Furthermore, there are more hyperparameters to tune, so model selection is more expensive. It is also much easier to overfit a complex model using kernel RBF.  
 - Since our data is linearly separable using kernel LIN, it would not make sense if we chose to adopt a more complex model that is more expensive in terms on time and space, and also risk the chance of overfitting of our dataset.  
 
-## Sub-topic 1: How can we use the stress level predicted from emotions, to predict sleep quality
+## Why we ultimately choose SVM with linear kernel as the model to use for our emotions dataset
+
+- We picked SVM with LIN kernel > Decision Tree as it takes into account multiple factors, instead of just one factor at a time, thus increasing the classification accuracy  
+- We picked SVM with LIN kernel > Linear SVC as it has higher accuracy due to the larger-margin separating hyperplane as mentioned earlier  
+- We picked SVM with LIN kernel > SVM with RBF kernel as it is cheaper and less complex  
+- We picked SVM with LIN kernel > SVM with POLY kernel as the SVM with POLY kernel requires 3 variables, thus it is more expensive to get and optimise the 3 variables to get the optimal value  
+
+# Sub-topic 1: How can we use the stress level predicted from emotions, to predict sleep quality
 - Since now we are able to predict stress levels using the emotions dataset, we can then use the stress level to predict sleep quality
 - We are using the variables `Eye Movement (REM)` and `Sleeping Hours` as measures for sleep quality, with higher REM and sleep hours indicating better sleep quality.
 - We first split the dataset into train and test dataset, with the ratio of 75% train dataset and 25% test dataset uniformly in random  
@@ -206,7 +213,7 @@ Since the model of SVM on the categorical dataset "Stress Analysis", has the bet
 <img src="https://i.imgur.com/JXd93wQ.png" title="" alt="Predicting sleep hours using stress level" width="650">
 <img src="https://i.imgur.com/yjE1ZZr.png" title="" alt="Linear regression line for REM using stress level" width="700">
 
-## Sub-topic 2: How can we use numeric sleeping data to predict stress level if emotions are unavailable
+# Sub-topic 2: How can we use numeric sleeping data to predict stress level if emotions are unavailable
 
 - In the case if the user is unsure of his own emotions, he can also rely on his numeric sleeping data to predict his stress level  
 - We first split the dataset into train and test dataset, with the ratio of 75% train dataset and 25% test dataset uniformly in random  
