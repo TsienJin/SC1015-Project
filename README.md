@@ -129,21 +129,13 @@ These two models perform classification from different approaches, where `Linear
 
 The dataset used has only 4 distinct values for each data point. This results in a high probabilty of misclassification. `SVC`'s allowable margin for error accomodates for this through its provision of an acceptable range of error, in turn resulting in a noticably higher accuracy of `1.0` as compared to that of `LinearSVC`.
 
-
-
-
-
-
-
-
-
 `Comparing SVM kernals (YZ)`
 
 > 1. Strength of linear kernal
 > 
 > 2. Why RBF kernal is good (also explain briefly what is RBF kernal)
 
-### strength of linear kernel
+### Strength of linear kernel
 
 Training a SVM with linear = kernel is much faster than with other kernels. This is because when training a SVM with a linear kernel, only the optimisation of the C regularisation parameter is required. The c regularisation parameter tells the SVM optimization how much you want to avoid misclassifying each training point. For larger values of C, the optimization will choose a smaller margin hyperplane. For small values of C, the optimizer will look for larger-margin separating hyperplane, even if that hyperplane misclassifies more points.
 
@@ -173,7 +165,6 @@ Since for our model, we only used the degree of `4` and c of `1.0`, it may not b
 
 With the parameter of `degree` relating to `b`, and `coef0` relating to `a`, by varying these parameters will change the polynomial function and thus lead to different higher dimension relationships between the two variables. There is no shortcut for us to choose the best parameters and we will need to try over a range of values to be able to find the best value for `degree`, `c` and `coef0`. However, the time complexity for such operation will be `x^3` as we have to vary 3 parameters. It will be both time and space consuming and thus not feasible to do so.  
 
-
 Since the model of SVM on the categorical dataset "Stress Analysis", has the better classification accuracy of `1.0`, as comapred to Decision Tree's classification accuracy of `0.79554`, we decided to proceed with the SVM model instead of decision trees.  
 
 `Since now we have the models for both datasets, with the common categorial variable of "Stress Level", we are able to use the emotions, sentiment variables in the dataset "Stress Analysis", to predict the "Stress Level". We then can use that "***Stress Level***" to predict the quality of sleep, namely the variables "***Eye Movement (REM)***" and "***Sleeping Hours***".`
@@ -186,8 +177,9 @@ Since the model of SVM on the categorical dataset "Stress Analysis", has the bet
 - We used linear regression on the dataset "Human Stress Detection in and through Sleep", so that we are able to use "***Stress Level***" to predict factors that affect sleep quality, which are "***Eye Movement (REM)***:, and "***Sleeping Hours***". [NEED TO JUSTIFY WHY]   
 
 ### Why we chose kernel LIN over kernel RBF
-  - It is because linear SVM is a parametric model, an RBF kernel SVM isn't, and the complexity of the latter grows with the size of the training set. Not only is it more expensive to train an RBF kernel SVM, there is also a need to keep the kernel matrix around, and the projection into this "infinite" higher dimensional space where the data becomes linearly separable is more expensive as well during prediction. Furthermore, there are more hyperparameters to tune, so model selection is more expensive. It is also much easier to overfit a complex model using kernel RBF.  
-  - Since our data is linearly separable using kernel LIN, it would not make sense if we chose to adopt a more complex model that is more expensive in terms on time and space, and also risk the chance of overfitting of our dataset.  
+
+- It is because linear SVM is a parametric model, and RBF kernel SVM isn't, and the complexity of the latter grows with the size of the training set. Not only is it more expensive to train an RBF kernel SVM, there is also a need to keep the kernel matrix around, and the projection into this "infinite" higher dimensional space where the data becomes linearly separable is more expensive as well during prediction. Furthermore, there are more hyperparameters to tune, so model selection is more expensive. It is also much easier to overfit a complex model using kernel RBF.  
+- Since our data is linearly separable using kernel LIN, it would not make sense if we chose to adopt a more complex model that is more expensive in terms on time and space, and also risk the chance of overfitting of our dataset.  
 
 ## Sub-topic: How can we use numeric sleeping data to predict stress level if emotions are unavailable
 
