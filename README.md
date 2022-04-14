@@ -139,6 +139,8 @@ The dataset used has only 4 distinct values for each data point. This results in
 
 Training a SVM with linear = kernel is much faster than with other kernels. This is because when training a SVM with a linear kernel, only the optimisation of the C regularisation parameter is required. The c regularisation parameter tells the SVM optimization how much you want to avoid misclassifying each training point. For larger values of C, the optimization will choose a smaller margin hyperplane. For small values of C, the optimizer will look for larger-margin separating hyperplane, even if that hyperplane misclassifies more points.
 
+<img src="https://i.stack.imgur.com/07jiy.png" title="" alt="SVM C parameter" width="419">
+
 Also, SVM with linear kernel is one of the simplest classifiers which leads to higher performance accuracy and lower cost in the long run.
 
 ### Why RBF kernal is good
