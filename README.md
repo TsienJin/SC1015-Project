@@ -143,7 +143,9 @@ Also, SVM with linear kernel is one of the simplest classifiers which leads to h
 
 ### Why RBF kernal is good
 
-Radial Basis Function (RBF) kernel is one of the default kernel used with the sklearn's SVM classification algorithm. It can be described using the following formula: insert formula here 
+Radial Basis Function (RBF) kernel is one of the default kernel used with the sklearn's SVM classification algorithm. It can be described using the following formula: 
+
+<img src="https://miro.medium.com/max/1400/1*dE_SI6I0EBFDJFuY6TDLfg.png" title="" alt="RBF Kernel Definition" width="419">
 
 The gamma of the model is a scalar that defines how much influence a single training point has. The larger gamma is, the closer other points must be to affect the model. Using RBF we can set the gamma manually and control individual points' influence on the overall algorithm and model. This allows us to manipulate how much we want each variable to influence the classification process. (Less significant variables can be given a larger gamma while more significant variables can be given a lower gamma, note that gamma must always be more than zero)
 
