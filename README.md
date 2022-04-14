@@ -143,6 +143,10 @@ Training a SVM with linear = kernel is much faster than with other kernels. This
 
 <img src="https://i.stack.imgur.com/07jiy.png" title="" alt="SVM C parameter" width="419">
 
+Formula for gamma:
+
+<img src="https://imgur.com/a/7srryOH" title="" alt="Gamma formula" width="419">
+
 Also, SVM with linear kernel is one of the simplest classifiers which leads to higher performance accuracy and lower cost in the long run.
 
 ### Why RBF kernal is good
