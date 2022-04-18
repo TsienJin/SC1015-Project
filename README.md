@@ -8,21 +8,15 @@
 
 3. [TsienJin (Tsien Jin) · GitHub](https://github.com/TsienJin)
 
-
-
 #### Datasets used
 
 - [Sleep Analysis](https://data.world/dataorg1/stress-analysis) -- Dataset with descrete values related to emotions (Primary Dataset).
 
 - [Human Stress Detection in and through Sleep | Kaggle](https://www.kaggle.com/laavanya/human-stress-detection-in-and-through-sleep?select=SaYoPillow.csv) -- Continous data obtained during sleep (Secondary Dataset).
 
-
-
 ## Problem
 
 Our group set out to explore the connection between emotions and stress levels to predict sleep quality.
-
-
 
 ## Data Preperation
 
@@ -40,8 +34,6 @@ The dataset, "Human Stress Detection in and through Sleep", has ***5 stress leve
 
 - 4 - high
 
-
-
 On the other hand, for the dataset, "Stress Analysis", have ***4 stress levels***.
 
 - 0 - no
@@ -51,8 +43,6 @@ On the other hand, for the dataset, "Stress Analysis", have ***4 stress levels**
 - 2 - moderate
 
 - 3 - severe
-
-
 
 By suitability, we relabelled the stress levels of the dataset "Human Stress Detection in and through Sleep" from 5 levels of stress to 4 levels of stress, so as to be able to compare with the "Stress Analysis" dataset. For the dataset "Human Stress Detection in and through Sleep", We re-categorised:
 
@@ -66,8 +56,6 @@ By suitability, we relabelled the stress levels of the dataset "Human Stress Det
 
 ![Relabeling stress level](https://i.imgur.com/ykpEpBt.png)
 
-
-
 We also labeled the *Stress Analysis* dataset, from text to numeric values (in ML/Classification.ipynb) to facilitate machine learning.
 
 - "No": 0
@@ -75,23 +63,17 @@ We also labeled the *Stress Analysis* dataset, from text to numeric values (in M
 - "Moderate": 2
 - "Severe": 3
 
-
-
 ### Changing Units for Temperature
 
 We first converted the column of *Body temperature* in the Dataset *Human Stress Detection in and through Sleep* from <u>farenheit</u> to <u>celsius</u>, so that it is easier for users to understand and input their data.
 
 ![Converting farenheight to celsius](https://i.imgur.com/xkq3Npp.png)
 
-
-
 ## EDA [MISSING!]
 
 1. Biasness of data
 
 2. Initial Findings
-
-
 
 ## Building Machine Learning Models
 
@@ -101,13 +83,9 @@ In order for us to choose the best model for our project, we compared a few diff
 
 2. Support Vector Machines (with various kernels)
 
-
-
 The model of choice for the (secondary) [Human Stress Detection in and through Sleep](https://www.kaggle.com/laavanya/human-stress-detection-in-and-through-sleep?select=SaYoPillow.csv) dataset, we opted to go for a simple yet effective method for deriving a machine model.
 
 1. Linear Regression
-
-
 
 For us to determine the accuracy of each model, the data is split into test and train dataframes, with 20% of the data being used as test data and 80% being used as training data.
 
@@ -115,8 +93,6 @@ For us to determine the accuracy of each model, the data is split into test and 
 data = pd.read_csv('../data.csv')
 dataTrain, dataTest = train_test_split(data, train_size=0.8)
 ```
-
-
 
 ### Classification Tree
 
@@ -127,8 +103,6 @@ To dertermine the optimal depth for the decision tree, we iterated over a range 
 Decision trees only takes into account one variable at every decision stage, as we only consider a single variable to make our classification decision (splitting of the data set) instead of taking all the variables at each node. Even if we determine the optimal depth for our model, we sacrifice the resolution of 7 other data points leading to a less refined classification model. Below is the decision tree of depth 8.
 
 ![Decision tree of depth 8](https://i.imgur.com/ZezsASy.png)
-
-
 
 ### Support Vector Machine
 
@@ -142,8 +116,6 @@ We compared 4 types of SVM models found in [scikit learn](https://scikit-learn.o
 
 - SVC with poly kernel `sklearn.svm.SVC(kernel="poly", degree=4, gamma='auto')`
 
-
-
 #### Support Vector Machine as Classifiers
 
 Support Vector Machines (SVM) form hyper-planes or a set of hyper-planes in an infinite dimensional space to classify data points into labled subspaces.
@@ -154,8 +126,6 @@ Support Vector Machines (SVM) form hyper-planes or a set of hyper-planes in an i
 
 The SVM model uses a cost-minimizing function while maximizing the distance between the hyper-plane and the support vectors to acheive a classification model with high accuracy (Scikit-learn, n.d.).
 
-
-
 #### Strength of Linear Kernel
 
 Training a SVM with a linear kernel `kernel = linear` is much faster than with other kernels. This is because when training a SVM with a linear kernel, only the optimisation of the `C` regularisation parameter is required. The `C` regularisation parameter tells the SVM optimization how much you want to avoid misclassifying each training point. For larger values of `C`, the optimization will choose a smaller margin hyperplane. For small values of `C`, the optimizer will look for larger-margin separating hyperplane, even if that hyperplane misclassifies more points.
@@ -164,15 +134,11 @@ Training a SVM with a linear kernel `kernel = linear` is much faster than with o
 
 Additionally, SVM with linear kernel is one of the simplest classifiers which leads to higher performance accuracy and lower cost in the long run.
 
-
-
 #### Benefits of Radial Basis Function Kernel
 
 Radial Basis Function (RBF) kernel is one of the default kernel used with the sklearn's SVM classification algorithm. It can be described using the following formula:
 
 ![RBF Kernel Definition](https://miro.medium.com/max/1400/1*dE_SI6I0EBFDJFuY6TDLfg.png)
-
-
 
 The `gamma` of the model is a scalar that defines how much influence a single training point has. The larger gamma is, the closer other points must be to affect the model.
 
@@ -180,15 +146,11 @@ The `gamma` of the model is a scalar that defines how much influence a single tr
 
 Using RBF we can set the `gamma` manually and control individual points' influence on the overall algorithm and model. This allows us to manipulate how much we want each variable to influence the classification process. (Less significant variables can be given a larger gamma while more significant variables can be given a lower gamma, note that gamma must always be more than zero).
 
-
-
 #### Comparing our SVM Models
 
 We plotted a bargraph to see the classification accuracy of different SVM kernel, where the SVM models with `linear` and `RBF` kernals have the highest classification accuracy of `1.0` on our test data set `dataTest`.
 
 ![Graph of accuracy agaisnt type of SVM](https://i.imgur.com/T9WluYB.png)
-
-
 
 ##### Linear SVC and SVC with Linear Kernel
 
@@ -197,23 +159,15 @@ These two models (Linear SVC and SVC with Linear Kernel) perform classification 
 - `LinearSVC` -- <u> Squared Hinge Loss</u> incurs cost on data points that are *easy to identify*. This occurs when the data points are within the region of correct classification, but is too far away from the support vector (Veen B. V., 2020).
 - `SVC` -- <u>Maximizing margin</u> and incurring a penalty for misclassification is also a form of a hinge loss cost function. However, specific to `SVC`, the cost function has an allowable distance between some samples and the margin boundary (Scikit-learn, n.d.). This in turn allows for an acceptable range of error that can facilitate higher accuracy in classification.
 
-
-
 **Accounting for Accuracy Differences**
 
 The dataset used has only 4 distinct values for each data point. This results in a high probabilty of misclassification. `SVC`'s allowable margin for error accomodates for this through its provision of an acceptable range of error, in turn resulting in a noticably higher accuracy of `1.0` as compared to that of `LinearSVC`.
-
-
 
 ##### Comparing Linear Kernel and RBF Kernel
 
 Both of these models have an accuracy of `1.0`. However, the complexity of an RBF model grows with the size of the training data, which results in it being more expensive to train as compared to a Linear Kernel SVM -- taking into account the additional expenses to fine tune the RBF kernel to our dataset.
 
-
-
 Since our data is linearly separable using kernel LIN, follows for us to chose the Linear Kernel SVM which is less expensive and faster to train.
-
-
 
 ##### Low Accuracy with Poly Kernel
 
@@ -223,13 +177,9 @@ Since for our model, we only used the degree of `4` and `C = 1.0`, it may not be
 
 With the parameter of `degree` relating to `b`, and `coef0` relating to `a`, by varying these parameters will change the polynomial function and thus lead to different higher dimension relationships between the two variables. There is no shortcut for us to choose the best parameters and we will need to try over a range of values to be able to find the best value for `degree`, `c` and `coef0`. However, the time complexity for such operation will be `x^3` as we have to vary 3 parameters. It will be both time and space consuming and thus not feasible to do so.
 
+### Linear Regression
 
-
-### Linear Regression (MISSING)
-
-
-
-
+Refer to Sub-topic 2.
 
 ## Findings from Machine Model
 
@@ -245,13 +195,9 @@ When comparing the classification accuracy of our four SVM models with different
 
 4. While both RBF and Linear kernels have an accuracy of `1.0`, the RBF kernel SVM is significantly more expensive to train to obtain the same result, therefore the model with a Linear kernel is the optimal choice for our dataset.
 
-
-
 ### Secondary Dataset (TOUCH UP)
 
 We used linear regression on the dataset "Human Stress Detection in and through Sleep", so that we are able to use "***Stress Level***" to predict factors that affect sleep quality, which are "***Eye Movement (REM)***:, and "***Sleeping Hours***"
-
-
 
 # Sub-topic 1: How can we use the stress level predicted from emotions, to predict sleep quality
 
@@ -264,13 +210,7 @@ Since now we are able to predict stress levels using the primary dataset based o
 
 ![Linear regression code](https://i.imgur.com/0cjn0Jo.png) ![Predicting REM using stress level](https://i.imgur.com/YCQZYh8.png) ![Linear regression line for REM using stress level](https://i.imgur.com/Z9LV4mM.png) ![Predicting sleep hours using stress level](https://i.imgur.com/JXd93wQ.png) ![Linear regression line for REM using stress level](https://i.imgur.com/yjE1ZZr.png)
 
-
-
 ### FINDINGS (MISSING)
-
-
-
-
 
 # Sub-topic 2: How can we use numeric sleeping data to predict stress level if emotions are unavailable
 
@@ -293,15 +233,9 @@ For the test dataset:
 
 ![Linear regression for stress level](https://i.imgur.com/HbsP27r.png)
 
-
-
 From the above results, we can see that the classification accuracy is very high, thus it would be a good measure for `Sleeping Hours (sr.1), Body Temperature (t), Blood Oxygen (bo), Heart Rate (hr)` to predict `Stress Level (sl)`.
 
-
-
 We then used the coefficients obtained from the linear regression model, and applied to our app, so that it is simpler for user to key in their numeric sleeping data to obtain a predicted stress level.
-
-
 
 We also made it available for the users to be able to see some other numeric sleeping data that are less easily obtainable. For instance, `Snoring Rate (rr), Respiration Rate (rr), Limb Movement (lm), Eye Movement (rem)`.
 
@@ -314,4 +248,5 @@ Easily obtained data would be "sleeping hours (sr.1)", "body temperature (t)", "
 - We chose these 4 factors as they are easier to obtain as compared to the other factors due to the technology devices available today
 
 - After keying their numeric data into the app, they will be able to get their approximate stress level, together with the remaining sleeping data which may not be easily available for them previously
+  
   - The remaining sleep data which are not easily obtainable will be `"Snoring rate (sr)", "Respiration rate (rr)", "Limb movement (lm)", "Eye movement (rem)"`
