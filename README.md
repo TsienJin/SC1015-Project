@@ -43,7 +43,7 @@ We also labeled the *Stress Analysis* dataset, from text to numeric values (in M
 - "Moderate": 2
 - "Severe": 3
 
-![Relabeling Primary Dataset](https://i.imgur.com/BloopB2.jpg)
+![Relabeling Primary Dataset](https://i.imgur.com/0AAc37X.png)
 
 ### Changing Units for Temperature
 We first converted the column of *Body temperature* in the Dataset *Human Stress Detection in and through Sleep* from <u>farenheit</u> to <u>celsius</u>, so that it is easier for users to understand and input their data.
