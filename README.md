@@ -6,7 +6,7 @@
 
 
 #### Datasets used
-- [Sleep Analysis](https://data.world/dataorg1/stress-analysis) -- Dataset with descrete values related to emotions (Primary Dataset).
+- [Stress Analysis](https://data.world/dataorg1/stress-analysis) -- Dataset with descrete values related to emotions (Primary Dataset).
 - [Human Stress Detection in and through Sleep | Kaggle](https://www.kaggle.com/laavanya/human-stress-detection-in-and-through-sleep?select=SaYoPillow.csv) -- Continous data obtained during sleep (Secondary Dataset).
 
 
@@ -43,6 +43,7 @@ We also labeled the *Stress Analysis* dataset, from text to numeric values (in M
 - "Moderate": 2
 - "Severe": 3
 
+![Relabeling Primary Dataset](https://i.imgur.com/BloopB2.jpg)
 
 ### Changing Units for Temperature
 We first converted the column of *Body temperature* in the Dataset *Human Stress Detection in and through Sleep* from <u>farenheit</u> to <u>celsius</u>, so that it is easier for users to understand and input their data.
@@ -54,6 +55,14 @@ We first converted the column of *Body temperature* in the Dataset *Human Stress
 1. Biasness of data
 2. Initial Findings
 
+### EDA for Primary Dataset
+- We went to find the correlation of each variables and plotted a heatmap to show the correlation  
+
+![Correlation Heatmap (Primary Dataset](https://i.imgur.com/5na5Z5e.png)
+
+- From the above heatmap, we can see that the correlation between each variables in the predicting variables have almost no correlation  
+- However, all the predicting variables have same correlation in relation to the variable to predict, of `0.33`  
+- Therefore, there is no one factor that affects `"Stress"` the most, and all the other variables have `equal importance in predicting "Stress"`  
 
 ## Building Machine Learning Models
 In order for us to choose the best model for our project, we compared a few different models agaisnt each other to find the most suitable model for the (primary) [Sleep Analysis](https://data.world/dataorg1/stress-analysis) dataset.
@@ -186,7 +195,7 @@ In the case of the user being unsure of his/her own emotions, he/she can also re
 - We first split the dataset into train and test dataset, with the ratio of 80% train dataset and 20% test dataset uniformly in random
 - We then plotted the heatmap the see the correlation between all the `other variables` and `"Stress Level (sl)"`  
 
-![Correlation Heatmap](https://i.imgur.com/kwyTSSa.png)
+![Correlation Heatmap (Secondary Dataset](https://i.imgur.com/kwyTSSa.png)
 
 - From the above heatmap, we can see that the correlation between each variables in the predicting variables have very high correlation, which means each factor is important in predicting another factor  
 - However, all the predicting variables have about the same correlation in relation to the variable to predict, from 0.92 to 0.94  
