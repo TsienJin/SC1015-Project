@@ -169,39 +169,51 @@ We used linear regression on the dataset "Human Stress Detection in and through 
 Since now we are able to predict stress levels using the primary dataset based on discrete emotional datapoints, we can then use the stress level to predict sleep quality
 
 - We are using the variables `Eye Movement (REM)` and `Sleeping Hours` as measures for sleep quality, with higher REM and sleep hours indicating better sleep quality.
-- We first split the dataset into train and test dataset, with the ratio of 75% train dataset and 25% test dataset uniformly in random
+- We first split the dataset into train and test dataset, with the ratio of 80% train dataset and 20% test dataset uniformly in random
 - We then did linear regression on the "Sleep Analysis" dataset, using "Stress Level (sl)" to predict "Eye Movement (rem)" and "Sleeping Hours (sr.1)"
 - Then by getting the stress level predicted using emotions, we can then predict the values of "Eye Movement (rem)" and "Sleeping Hours (sr.1)"
 
-![Linear regression code](https://i.imgur.com/0cjn0Jo.png) ![Predicting REM using stress level](https://i.imgur.com/YCQZYh8.png) ![Linear regression line for REM using stress level](https://i.imgur.com/Z9LV4mM.png) ![Predicting sleep hours using stress level](https://i.imgur.com/JXd93wQ.png) ![Linear regression line for REM using stress level](https://i.imgur.com/yjE1ZZr.png)
+![Linear regression code](https://i.imgur.com/fmBjULZ.png) ![Predicting REM using stress level](https://i.imgur.com/ocSPOZH.png) ![Linear regression line for REM using stress level](https://i.imgur.com/kppN846.png) ![Predicting sleep hours using stress level](https://i.imgur.com/98YAL7n.png) ![Linear regression line for REM using stress level](https://i.imgur.com/9BIdwRW.png)
 
 ### FINDINGS (MISSING)
-
+- From the high Explained Variance (R^2) and low Mean Squared Error (MSE), we can tell that it is a good model of linear regression  
+- Thus, with the coefficients of the linear regression model, we can now link both datasets and models together, using the common data of `"Stress Level"`, to predict sleep quality using emotions  
+- However, since our stress level only have `four` discrete levels, it also means that our predicted values of `Eye Movement (REM)` and `Sleeping Hours` as measures for sleep quality, will only have `four` discrete values, which means everybody who have the same stress level, will have the same `Eye Movement (REM)` and `Sleeping Hours`, and thus same sleep quality  
+- Since that is not the case, it means that our dataset could be further improved by having numeric values for stress, instead of categorical values for stress levels  
 
 # Sub-topic 2: How can we use numeric sleeping data to predict stress level if emotions are unavailable
 In the case of the user being unsure of his/her own emotions, he/she can also rely on his/her numeric sleeping data to predict his/her stress level.
-- We first split the dataset into train and test dataset, with the ratio of 75% train dataset and 25% test dataset uniformly in random
+- We first split the dataset into train and test dataset, with the ratio of 80% train dataset and 20% test dataset uniformly in random
+- We then plotted the heatmap the see the correlation between all the `other variables` and `"Stress Level (sl)"`  
+
+![Correlation Heatmap](https://i.imgur.com/kwyTSSa.png)
+
+- From the above heatmap, we can see that the correlation between each variables in the predicting variables have very high correlation, which means each factor is important in predicting another factor  
+- However, all the predicting variables have about the same correlation in relation to the variable to predict, from 0.92 to 0.94  
+- Therefore, there is no one factor that affects "Stress" the most, and all the other variables have about the same importance in predicting "Stress"  
+
+
 - We then did linear regression on the "Sleep Analysis" dataset, to use `Sleeping Hours (sr.1), Body Temperature (t), Blood Oxygen (bo), Heart Rate (hr)` to predict `Stress Level (sl)`. This is because the four predicting factors are easily obtainable via the gadgets commonly available.
 
-![Linear regression code](https://i.imgur.com/JkgbYgx.png)
+![Linear regression code](https://i.imgur.com/MF3PqPH.png)
 
 For the train dataset:
-- Explained Variance (R^2) : `0.9252379512936114`
-- Mean Squared Error (MSE) : `0.0758114100891848`
+- Explained Variance (R^2) : `0.9278968928291338`
+- Mean Squared Error (MSE) : `0.0758360529790203`
 
 For the test dataset:
-- Explained Variance (R^2) : `0.9295827987614113`
-- Mean Squared Error (MSE) : `0.07817144279462471`
+- Explained Variance (R^2) : `0.9181485649048771`
+- Mean Squared Error (MSE) : `0.07884567881769432`
 
-![Linear regression for stress level](https://i.imgur.com/HbsP27r.png)
+![Linear regression for stress level](https://i.imgur.com/0PiGKRK.png)
 
 From the above results, we can see that the classification accuracy is very high, thus it would be a good measure for `Sleeping Hours (sr.1), Body Temperature (t), Blood Oxygen (bo), Heart Rate (hr)` to predict `Stress Level (sl)`.
 
 We then used the coefficients obtained from the linear regression model, and applied to our app, so that it is simpler for user to key in their numeric sleeping data to obtain a predicted stress level.
 
-We also made it available for the users to be able to see some other numeric sleeping data that are less easily obtainable. For instance, `Snoring Rate (rr), Respiration Rate (rr), Limb Movement (lm), Eye Movement (rem)`.
+We also made it available for the users to be able to see some other numeric sleeping data that are less easily obtainable. For instance, `Snoring Rate (sr), Respiration Rate (rr), Limb Movement (lm), Eye Movement (rem)`.
 
-![Predicting snoring rate & respiration rate](https://i.imgur.com/aCOixB3.png) ![Predicting limb movement & REM](https://i.imgur.com/ybyj5q3.png)
+![Predicting snoring rate & respiration rate](https://i.imgur.com/qjZNPWo.png) ![Predicting limb movement & REM](https://i.imgur.com/fPjynU6.png)
 
 
 ## Phone app to allow users to key in their easily obtained data to get stress level (TOUCH UP A BIT)
