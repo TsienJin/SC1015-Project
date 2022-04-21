@@ -51,18 +51,17 @@ We first converted the column of *Body temperature* in the Dataset *Human Stress
 ![Converting farenheight to celsius](https://i.imgur.com/xkq3Npp.png)
 
 
-## EDA [MISSING!]
-1. Biasness of data
-2. Initial Findings
+## EDA
+### Primary Dataset
+![Correlation Heatmap (Primary Dataset)](https://i.imgur.com/5na5Z5e.png)
 
-### EDA for Primary Dataset
-- We went to find the correlation of each variables and plotted a heatmap to show the correlation  
+From the above heatmap, we can see that the correlation between each variables in the predicting variables have almost no correlation. However, all the predicting variables have same correlation in relation to the variable to predict, of `0.33`  
+Therefore, there is no one factor that affects `"Stress"` the most, and all the other variables have equal importance in predicting `"Stress"`.
 
-![Correlation Heatmap (Primary Dataset](https://i.imgur.com/5na5Z5e.png)
+![Distribution of stress levels](https://i.imgur.com/cCNfs3j.png)
 
-- From the above heatmap, we can see that the correlation between each variables in the predicting variables have almost no correlation  
-- However, all the predicting variables have same correlation in relation to the variable to predict, of `0.33`  
-- Therefore, there is no one factor that affects `"Stress"` the most, and all the other variables have `equal importance in predicting "Stress"`  
+Furthermore, we can observe that this dataset is biased towards `Stress_Label` of value `1` and `2` accounting for almost all the data entries. This may potentially hamper the classification accuracy of our machine models.
+
 
 ## Building Machine Learning Models
 In order for us to choose the best model for our project, we compared a few different models agaisnt each other to find the most suitable model for the (primary) [Sleep Analysis](https://data.world/dataorg1/stress-analysis) dataset.
