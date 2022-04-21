@@ -27,18 +27,25 @@ function calcRes({data={}}){
 
 
 function calcStressLvl({snoreRate, respRate, bodyTemp, limbMove, bloodOxy, rem, sleepHour, heartRate}={}){
-  const formula = {
-    'b': 2.30958516,
-    'snoreRate': 0.00967718*snoreRate,
-    'respRate': 0.01734862*respRate,
-    'bodyTemp': -0.29588161*bodyTemp,
-    'limbMove': -0.07744968*limbMove,
-    'bloodOxy': 0.04731092*bloodOxy,
-    'rem': 0.03202785*rem,
-    'sleepHour': -0.11154598*sleepHour,
-    'heartRate': 0.04337155*heartRate,
-  }
+  // const formula = {
+  //   'b': 7.53394055,
+  //   'snoreRate': 0.00957202*snoreRate,
+  //   'respRate': 0.01736459*respRate,
+  //   'bodyTemp': -0.16311728*bodyTemp,
+  //   'limbMove': -0.07680987*limbMove,
+  //   'bloodOxy': 0.04658455*bloodOxy,
+  //   'rem': 0.03185748*rem,
+  //   'sleepHour': -0.11237852*sleepHour,
+  //   'heartRate': 0.04341148*heartRate,
+  // }
 
+  const formula = {
+    'b': 10.53515758,
+    'bodyTemp': 0.23214224*bodyTemp,
+    'bloodOxy': -0.20518597*bloodOxy,
+    'sleepHour': -0.10638103*sleepHour,
+    'heartRate': 0.03505455*heartRate,
+  }
 
   return(calcRes({data:formula}))
 
