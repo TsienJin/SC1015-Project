@@ -47,11 +47,11 @@ function calcStressLvl({snoreRate, respRate, bodyTemp, limbMove, bloodOxy, rem, 
 
 function calcSnoreRate({sleepHour, bodyTemp, bloodOxy, heartRate} = {}){
   const formula = {
-    'b': 18.64486395,
-    'sleepHour': -1.93603405*sleepHour,
-    'bodyTemp': 5.74601578*bodyTemp,
-    'bloodOxy': 2.5387048*bloodOxy,
-    'heartRate': 1.5012626*heartRate,
+    'b': 8.18795405,
+    'sleepHour': -2.0357379*sleepHour,
+    'bodyTemp': 5.54741098*bodyTemp,
+    'bloodOxy': 2.35046571*bloodOxy,
+    'heartRate': 1.50806063*heartRate,
   }
   return (formula.sleepHour + formula.bodyTemp + formula.bloodOxy + formula.heartRate + formula.b)
 }
@@ -59,9 +59,9 @@ function calcSnoreRate({sleepHour, bodyTemp, bloodOxy, heartRate} = {}){
 function calcRespRate({sleepHour, bodyTemp, bloodOxy, heartRate} = {}){
   const formula = {
     'b': -4,
-    'sleepHour': (2.34047540**(-16))*sleepHour,
-    'bodyTemp': (8.88178420**(-16))*bodyTemp,
-    'bloodOxy': ((-4.30211422)**(-16))*bloodOxy,
+    'sleepHour': ((-9.71025912)**(-17))*sleepHour,
+    'bodyTemp': (2.16493490**(-16))*bodyTemp,
+    'bloodOxy': ((-1.23512311)**(-15))*bloodOxy,
     'heartRate': (4.00000000**(-1))*heartRate,
   }
   return (formula.sleepHour + formula.bodyTemp + formula.bloodOxy + formula.heartRate + formula.b)
@@ -69,22 +69,22 @@ function calcRespRate({sleepHour, bodyTemp, bloodOxy, heartRate} = {}){
 
 function calcLimbMove({sleepHour, bodyTemp, bloodOxy, heartRate} = {}){
   const formula = {
-    'b': 6.27953374,
-    'sleepHour': -0.14477237*sleepHour,
-    'bodyTemp': 1.67989071*bodyTemp,
-    'bloodOxy': -0.83866685*bloodOxy,
-    'heartRate': 0.39445008*heartRate,
+    'b': 4.14328878,
+    'sleepHour': -0.1426558*sleepHour,
+    'bodyTemp': 1.57034965*bodyTemp,
+    'bloodOxy': -0.77681288*bloodOxy,
+    'heartRate': 0.39773008*heartRate,
   }
   return (formula.sleepHour + formula.bodyTemp + formula.bloodOxy + formula.heartRate + formula.b)
 }
 
 function calcRem({sleepHour, bodyTemp, bloodOxy, heartRate} = {}){
   const formula = {
-    'b': 111.40541977,
-    'sleepHour': -2.28684459*sleepHour,
-    'bodyTemp': 13.28375941*bodyTemp,
-    'bloodOxy': -5.6985275*bloodOxy,
-    'heartRate': 0.84802542*heartRate,
+    'b': 111.92770076,
+    'sleepHour': -2.28738406*sleepHour,
+    'bodyTemp': 13.55333375*bodyTemp,
+    'bloodOxy': -5.81145234*bloodOxy,
+    'heartRate': 0.85946461*heartRate,
   }
   return (formula.sleepHour + formula.bodyTemp + formula.bloodOxy + formula.heartRate + formula.b)
 }

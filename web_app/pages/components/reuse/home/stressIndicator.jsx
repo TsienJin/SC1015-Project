@@ -15,7 +15,6 @@ function StressBar({ stressLvl=1 }){
                 <div className={`w-full p-2 border border-gray-500 rounded ${1>=stressLvl?"bg-white":"bg-yellow-200"}`}></div>
                 <div className={`w-full p-2 border border-gray-500 rounded ${2>=stressLvl?"bg-white":"bg-yellow-300"}`}></div>
                 <div className={`w-full p-2 border border-gray-500 rounded ${3>=stressLvl?"bg-white":"bg-yellow-400"}`}></div>
-                <div className={`w-full p-2 border border-gray-500 rounded ${4>=stressLvl?"bg-white":"bg-yellow-500"}`}></div>
             </div>
             <div className='flex flex-row w-full justify-between'>
                 <span className="text-xs font-normal text-gray-500">Low</span>
@@ -32,8 +31,7 @@ function StressText({ stressLvl=1 }){
         1: 'Little to no stress.',
         2: 'Healthy amount of stress.',
         3: 'Moderate level of stress.',
-        4: 'Noticably stressed stressed.',
-        5: 'You are very stressed, it will be advisable to find a way to manage your stress.',
+        4: 'You are very stressed, it will be advisable to find a way to manage your stress.',
 
     }
 
@@ -70,8 +68,8 @@ export default function StressIndicator({ stressLvl=1 }) {
         stressLvl=1
     }
 
-    if(stressLvl>5){
-        stressLvl=5
+    if(stressLvl>4){
+        stressLvl=4
     }
   
     if(stressLvl){
