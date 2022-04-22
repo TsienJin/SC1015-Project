@@ -84,6 +84,8 @@ To dertermine the optimal depth for the decision tree, we iterated over a range 
 
 <img src="https://i.imgur.com/Rnbv8MI.png" title="" alt="Accuracy agaisnt varying depth of claddification tree." width="561">
 
+<img src="https://imgur.com/e1n3kTs" title="" alt="Best accuracy" width="561">
+
 Decision trees only takes into account one variable at every decision stage, as we only consider a single variable to make our classification decision (splitting of the data set) instead of taking all the variables at each node. Even if we determine the optimal depth for our model, we sacrifice the resolution of 7 other data points leading to a less refined classification model. Below is the decision tree of depth 8.
 
 ![Decision tree of depth 8](https://i.imgur.com/ZezsASy.png)
@@ -233,3 +235,6 @@ Easily obtained data would be "sleeping hours (sr.1)", "body temperature (t)", "
 - We chose these 4 factors as they are easier to obtain as compared to the other factors due to the technology devices commonly available today in households.
 - After keying their numeric data into the app, they will be able to get their approximate stress level, together with the remaining sleeping data which may not be easily available for them previously.
   - The remaining sleep data which are not easily obtainable will be `"Snoring rate (sr)", "Respiration rate (rr)", "Limb movement (lm)", "Eye movement (rem)"`.
+
+<img src="https://imgur.com/qVPNR3B" title="" alt="App1" width="561">
+<img src="https://imgur.com/RvAU0Ya" title="" alt="App2" width="561">
