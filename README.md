@@ -1,7 +1,7 @@
 # SC1015 Data Science and AI Project
 #### Contributors
-1. [imevahans · GitHub](https://github.com/imevahans)
-2. [PehYuZe · GitHub](https://github.com/PehYuZe)
+1. [imevahans (Xin Han) · GitHub](https://github.com/imevahans)
+2. [PehYuZe (Yu Ze) · GitHub](https://github.com/PehYuZe)
 3. [TsienJin (Tsien Jin) · GitHub](https://github.com/TsienJin)
 
 
