@@ -84,7 +84,7 @@ To dertermine the optimal depth for the decision tree, we iterated over a range 
 
 <img src="https://i.imgur.com/Rnbv8MI.png" title="" alt="Accuracy agaisnt varying depth of claddification tree." width="561">
 
-<img src="https://imgur.com/e1n3kTs" title="" alt="Best accuracy" width="561">
+![highest accuracy](https://imgur.com/e1n3kTs.png)
 
 Decision trees only takes into account one variable at every decision stage, as we only consider a single variable to make our classification decision (splitting of the data set) instead of taking all the variables at each node. Even if we determine the optimal depth for our model, we sacrifice the resolution of 7 other data points leading to a less refined classification model. Below is the decision tree of depth 8.
 
