@@ -1,8 +1,11 @@
 # SC1015 Data Science and AI Project
 #### Contributors
 1. [imevahans (Xin Han) · GitHub](https://github.com/imevahans)
+  - Linear Regression  
 2. [PehYuZe (Yu Ze) · GitHub](https://github.com/PehYuZe)
+  - Decision Trees  
 3. [TsienJin (Tsien Jin) · GitHub](https://github.com/TsienJin)
+  - Support Vector Machines (SVMs)  
 
 
 #### Datasets used
@@ -29,7 +32,7 @@ On the other hand, for the dataset, "Stress Analysis", have ***4 stress levels**
 - 2 - moderate
 - 3 - severe
 
-By suitability, we relabelled the stress levels of the dataset "Human Stress Detection in and through Sleep" from 5 levels of stress to 4 levels of stress, so as to be able to compare with the "Stress Analysis" dataset. For the dataset "Human Stress Detection in and through Sleep", We re-categorised:
+By suitability, we relabelled the stress levels of the dataset "Human Stress Detection in and through Sleep" from 5 levels of stress to 4 levels of stress, so as to be able to compare with the "Stress Analysis" dataset. For the dataset "Human Stress Detection in and through Sleep", We re-categorised (in EDA/Human Stress Detection in and through Sleep EDA.ipynb):
 - 0 - low/normal --> 0 - no
 - 1 - medium low --> 1 - mild
 - 2 - medium, 3 - medium high --> 2 - moderate
@@ -46,7 +49,7 @@ We also labeled the *Stress Analysis* dataset, from text to numeric values (in M
 ![Relabeling Primary Dataset](https://i.imgur.com/0AAc37X.png)
 
 ### Changing Units for Temperature
-We  converted the column of *Body temperature* in the Dataset *Human Stress Detection in and through Sleep* from <u>fahrenheit</u> to <u>celsius</u>, so that it is easier for users to understand and input their data.
+We  converted the column of *Body temperature* in the Dataset *Human Stress Detection in and through Sleep* from <u>fahrenheit</u> to <u>celsius</u>, so that it is easier for users to understand and input their data (in EDA/Human Stress Detection in and through Sleep EDA.ipynb).
 
 ![Converting farenheight to celsius](https://i.imgur.com/xkq3Npp.png)
 
@@ -55,7 +58,7 @@ We  converted the column of *Body temperature* in the Dataset *Human Stress Dete
 ### Primary Dataset
 ![Correlation Heatmap (Primary Dataset)](https://i.imgur.com/5na5Z5e.png)
 
-From the above heatmap, we can see that the correlation between each variables in the predicting variables have almost no correlation. However, all the predicting variables have same correlation in relation to the variable to predict, of `0.33`  
+From the above heatmap, we can see that the correlation between each variables in the predicting variables have almost no correlation. However, all the predicting variables have same correlation in relation to the variable to predict, of `0.33`.  
 Therefore, there is no one factor that affects `"Stress"` the most, and all the other variables have equal importance in predicting `"Stress"`.
 
 ![Distribution of stress levels](https://i.imgur.com/cCNfs3j.png)
@@ -94,7 +97,7 @@ Decision trees only takes into account one variable at every decision stage, as 
 
 ### Support Vector Machine
 We compared 4 types of SVM models found in [scikit learn](https://scikit-learn.org/stable/modules/svm.html).
-- linear SVM `sklearn.svm.LinearSVC`
+- Linear SVM `sklearn.svm.LinearSVC`
 - SVC with linear kernel `sklearn.svm.SVC(kernel=linear)`
 - SVC with RBF kernel `sklearn.svm.SVC(kernel="rbf", gamma='auto')`
 - SVC with poly kernel `sklearn.svm.SVC(kernel="poly", degree=4, gamma='auto')`
@@ -178,33 +181,33 @@ When comparing the classification accuracy of our four SVM models with different
 
 
 ### Secondary Dataset
-We used linear regression on the dataset "Human Stress Detection in and through Sleep", so that we are able to use "***Stress Level***" to predict factors that affect sleep quality, which are "***Eye Movement (REM)***:, and "***Sleeping Hours***"
+We used linear regression on the dataset "Human Stress Detection in and through Sleep", so that we are able to use "***Stress Level***" to predict factors that affect sleep quality, which are "***Eye Movement (REM)***:, and "***Sleeping Hours***".  
 
 
 # Sub-topic 1: How can we use the stress level predicted from emotions, to predict sleep quality
-Since now we are able to predict stress levels using the primary dataset based on discrete emotional datapoints, we can then use the stress level to predict sleep quality
+Since now we are able to predict stress levels using the primary dataset based on discrete emotional datapoints, we can then use the stress level to predict sleep quality.  
 
 - We are using the variables `Eye Movement (REM)` and `Sleeping Hours` as measures for sleep quality, with higher REM and sleep hours indicating better sleep quality.
-- We first split the dataset into train and test dataset, with the ratio of 80% train dataset and 20% test dataset uniformly in random
-- We then did linear regression on the "Sleep Analysis" dataset, using "Stress Level (sl)" to predict "Eye Movement (rem)" and "Sleeping Hours (sr.1)"
-- Then by getting the stress level predicted using emotions, we can then predict the values of "Eye Movement (rem)" and "Sleeping Hours (sr.1)"
+- We first split the dataset into train and test dataset, with the ratio of 80% train dataset and 20% test dataset uniformly in random.  
+- We then did linear regression on the "Sleep Analysis" dataset, using "Stress Level (sl)" to predict "Eye Movement (rem)" and "Sleeping Hours (sr.1)". 
+- Then by getting the stress level predicted using emotions, we can then predict the values of "Eye Movement (rem)" and "Sleeping Hours (sr.1)".  
 
 ![Linear regression code](https://i.imgur.com/fmBjULZ.png) ![Predicting REM using stress level](https://i.imgur.com/ocSPOZH.png) ![Linear regression line for REM using stress level](https://i.imgur.com/kppN846.png) ![Predicting sleep hours using stress level](https://i.imgur.com/98YAL7n.png) ![Linear regression line for REM using stress level](https://i.imgur.com/9BIdwRW.png)
 
-### FINDINGS
-- From the high Explained Variance (R^2) and low Mean Squared Error (MSE), we can tell that it is a good model of linear regression  
-- Thus, with the coefficients of the linear regression model, we can now link both datasets and models together, using the common data of `"Stress Level"`, to predict sleep quality using emotions  
-- However, since our stress level only have `four` discrete levels, it also means that our predicted values of `Eye Movement (REM)` and `Sleeping Hours` as measures for sleep quality, will only have `four` discrete values, which means everybody who have the same stress level, will have the same `Eye Movement (REM)` and `Sleeping Hours`, and thus same sleep quality  
-- Since that is not the case, it means that our dataset could be further improved by having numeric values for stress, instead of categorical values for stress levels  
+### Findings
+- From the high Explained Variance (R^2) and low Mean Squared Error (MSE), we can tell that it is a good model of linear regression.   
+- Thus, with the coefficients of the linear regression model, we can now link both datasets and models together, using the common data of `"Stress Level"`, to predict sleep quality using emotions.   
+- However, since our stress level only have `four` discrete levels, it also means that our predicted values of `Eye Movement (REM)` and `Sleeping Hours` as measures for sleep quality, will only have `four` discrete values, which means everybody who have the same stress level, will have the same `Eye Movement (REM)` and `Sleeping Hours`, and thus same sleep quality.   
+- Since that is not the case, it means that our dataset could be further improved by having numeric values for stress, instead of categorical values for stress levels.   
 
 # Sub-topic 2: How can we use numeric sleeping data to predict stress level if emotions are unavailable
 In the case of the user being unsure of his/her own emotions, he/she can also rely on his/her numeric sleeping data to predict his/her stress level.
-- We first split the dataset into train and test dataset, with the ratio of 80% train dataset and 20% test dataset uniformly in random
-- We then plotted the heatmap the see the correlation between all the `other variables` and `"Stress Level (sl)"`  
+- We first split the dataset into train and test dataset, with the ratio of 80% train dataset and 20% test dataset uniformly in random.  
+- We then plotted the heatmap the see the correlation between all the `other variables` and `"Stress Level (sl)"`.    
 
 ![Correlation Heatmap (Secondary Dataset](https://i.imgur.com/kwyTSSa.png)
 
-From the above heatmap, we can see that the correlation between each variables in the predicting variables are stronlgy correlated, which means each factor is important in predicting other factors. However, all the predicting variables have about the same correlation in relation to the variable to predict, from an absolute value of 0.92 to 0.94. Therefore, there is no one factor that affects "Stress" the most, and all the other variables have about the same importance in predicting "Stress"  
+From the above heatmap, we can see that the correlation between each variables in the predicting variables are stronlgy correlated, which means each factor is important in predicting other factors. However, all the predicting variables have about the same correlation in relation to the variable to predict, from an absolute value of 0.92 to 0.94. Therefore, there is no one factor that affects "Stress" the most, and all the other variables have about the same importance in predicting "Stress".    
 
 
 - We then did linear regression on the "Sleep Analysis" dataset, to use `Sleeping Hours (sr.1), Body Temperature (t), Blood Oxygen (bo), Heart Rate (hr)` to predict `Stress Level (sl)`. This is because the four predicting factors are easily obtainable via the gadgets commonly available.
@@ -225,16 +228,13 @@ From the above results, we can see that the classification accuracy is very high
 
 We then used the coefficients obtained from the linear regression model, and applied to our app, so that it is simpler for user to key in their numeric sleeping data to obtain a predicted stress level.
 
-We also made it available for the users to be able to see some other numeric sleeping data that are less easily obtainable. For instance, `Snoring Rate (sr), Respiration Rate (rr), Limb Movement (lm), Eye Movement (rem)`.
-
 ![Predicting snoring rate & respiration rate](https://i.imgur.com/qjZNPWo.png) ![Predicting limb movement & REM](https://i.imgur.com/fPjynU6.png)
 
 
 ## Phone app to allow users to key in their easily obtained data to get stress level
-Easily obtained data would be "sleeping hours (sr.1)", "body temperature (t)", "blood oxygen (bo)", "heart rate (hr)"
-- We chose these 4 factors as they are easier to obtain as compared to the other factors due to the technology devices commonly available today in households.
-- After keying their numeric data into the app, they will be able to get their approximate stress level, together with the remaining sleeping data which may not be easily available for them previously.
-  - The remaining sleep data which are not easily obtainable will be `"Snoring rate (sr)", "Respiration rate (rr)", "Limb movement (lm)", "Eye movement (rem)"`.
-
-<img src="https://imgur.com/qVPNR3B.png" title="" alt="App1" width="561">
-<img src="https://imgur.com/RvAU0Ya.png" title="" alt="App2" width="561">
+The phone app can be found [here](https://stress-o-meter.vercel.app).  
+The users will be able to use their easily obtained numeric sleeping data, which would be "sleeping hours (sr.1)", "body temperature (t)", "blood oxygen (bo)", "heart rate (hr)", to predict their stress level.   
+- We chose these 4 factors as they are easier to obtain as compared to the other factors due to the technology devices commonly available today in households.  
+ 
+<img src="https://imgur.com/qVPNR3B.png" title="" alt="App1" width="250">
+<img src="https://imgur.com/RvAU0Ya.png" title="" alt="App2" width="250">
