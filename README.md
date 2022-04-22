@@ -157,7 +157,13 @@ With the parameter of `degree` relating to `b`, and `coef0` relating to `a`, by 
 
 
 ### Linear Regression
-Refer to Sub-topic 2.
+Refer to Sub-topic 2 for more.
+
+We attempted a different approach to form classification models -- we first used a linear regression model to predict a continuous result for the stress level of the individual. We then utilised `np.round_()` to round off the values to the nearest whole integer.
+
+![confussion matrix](blob:https://imgur.com/7acd833b-cc25-4ad6-a992-1d08aac6279b)
+
+As seen from the confussion matrix above, the method above derived a classification accuracy of `1.0`.
 
 
 ## Findings from Machine Model
