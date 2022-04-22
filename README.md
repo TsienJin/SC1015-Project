@@ -236,5 +236,5 @@ Easily obtained data would be "sleeping hours (sr.1)", "body temperature (t)", "
 - After keying their numeric data into the app, they will be able to get their approximate stress level, together with the remaining sleeping data which may not be easily available for them previously.
   - The remaining sleep data which are not easily obtainable will be `"Snoring rate (sr)", "Respiration rate (rr)", "Limb movement (lm)", "Eye movement (rem)"`.
 
-<img src="https://imgur.com/qVPNR3B" title="" alt="App1" width="561">
-<img src="https://imgur.com/RvAU0Ya" title="" alt="App2" width="561">
+<img src="https://imgur.com/qVPNR3B.png" title="" alt="App1" width="561">
+<img src="https://imgur.com/RvAU0Ya.png" title="" alt="App2" width="561">
