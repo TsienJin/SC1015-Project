@@ -169,7 +169,7 @@ When comparing the classification accuracy of our four SVM models with different
 4. While both RBF and Linear kernels have an accuracy of `1.0`, the RBF kernel SVM is significantly more expensive to train to obtain the same result, therefore the model with a Linear kernel is the optimal choice for our dataset.
 
 
-### Secondary Dataset (TOUCH UP)
+### Secondary Dataset
 We used linear regression on the dataset "Human Stress Detection in and through Sleep", so that we are able to use "***Stress Level***" to predict factors that affect sleep quality, which are "***Eye Movement (REM)***:, and "***Sleeping Hours***"
 
 
@@ -183,7 +183,7 @@ Since now we are able to predict stress levels using the primary dataset based o
 
 ![Linear regression code](https://i.imgur.com/fmBjULZ.png) ![Predicting REM using stress level](https://i.imgur.com/ocSPOZH.png) ![Linear regression line for REM using stress level](https://i.imgur.com/kppN846.png) ![Predicting sleep hours using stress level](https://i.imgur.com/98YAL7n.png) ![Linear regression line for REM using stress level](https://i.imgur.com/9BIdwRW.png)
 
-### FINDINGS (MISSING)
+### FINDINGS
 - From the high Explained Variance (R^2) and low Mean Squared Error (MSE), we can tell that it is a good model of linear regression  
 - Thus, with the coefficients of the linear regression model, we can now link both datasets and models together, using the common data of `"Stress Level"`, to predict sleep quality using emotions  
 - However, since our stress level only have `four` discrete levels, it also means that our predicted values of `Eye Movement (REM)` and `Sleeping Hours` as measures for sleep quality, will only have `four` discrete values, which means everybody who have the same stress level, will have the same `Eye Movement (REM)` and `Sleeping Hours`, and thus same sleep quality  
@@ -196,9 +196,7 @@ In the case of the user being unsure of his/her own emotions, he/she can also re
 
 ![Correlation Heatmap (Secondary Dataset](https://i.imgur.com/kwyTSSa.png)
 
-- From the above heatmap, we can see that the correlation between each variables in the predicting variables have very high correlation, which means each factor is important in predicting another factor  
-- However, all the predicting variables have about the same correlation in relation to the variable to predict, from 0.92 to 0.94  
-- Therefore, there is no one factor that affects "Stress" the most, and all the other variables have about the same importance in predicting "Stress"  
+From the above heatmap, we can see that the correlation between each variables in the predicting variables are stronlgy correlated, which means each factor is important in predicting other factors. However, all the predicting variables have about the same correlation in relation to the variable to predict, from an absolute value of 0.92 to 0.94. Therefore, there is no one factor that affects "Stress" the most, and all the other variables have about the same importance in predicting "Stress"  
 
 
 - We then did linear regression on the "Sleep Analysis" dataset, to use `Sleeping Hours (sr.1), Body Temperature (t), Blood Oxygen (bo), Heart Rate (hr)` to predict `Stress Level (sl)`. This is because the four predicting factors are easily obtainable via the gadgets commonly available.
@@ -224,8 +222,8 @@ We also made it available for the users to be able to see some other numeric sle
 ![Predicting snoring rate & respiration rate](https://i.imgur.com/qjZNPWo.png) ![Predicting limb movement & REM](https://i.imgur.com/fPjynU6.png)
 
 
-## Phone app to allow users to key in their easily obtained data to get stress level (TOUCH UP A BIT)
+## Phone app to allow users to key in their easily obtained data to get stress level
 Easily obtained data would be "sleeping hours (sr.1)", "body temperature (t)", "blood oxygen (bo)", "heart rate (hr)"
-- We chose these 4 factors as they are easier to obtain as compared to the other factors due to the technology devices available today
-- After keying their numeric data into the app, they will be able to get their approximate stress level, together with the remaining sleeping data which may not be easily available for them previously
-  - The remaining sleep data which are not easily obtainable will be `"Snoring rate (sr)", "Respiration rate (rr)", "Limb movement (lm)", "Eye movement (rem)"`
+- We chose these 4 factors as they are easier to obtain as compared to the other factors due to the technology devices commonly available today in households.
+- After keying their numeric data into the app, they will be able to get their approximate stress level, together with the remaining sleeping data which may not be easily available for them previously.
+  - The remaining sleep data which are not easily obtainable will be `"Snoring rate (sr)", "Respiration rate (rr)", "Limb movement (lm)", "Eye movement (rem)"`.
