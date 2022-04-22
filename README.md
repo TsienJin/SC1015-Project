@@ -83,7 +83,7 @@ dataTrain, dataTest = train_test_split(data, train_size=0.8)
 
 
 ### Classification Tree
-To dertermine the optimal depth for the decision tree, we iterated over a range of values to determine the optimal depth of the tree. By plotting a graph of the classification accuracy and the depths of the tree, we are able to find the highest point of the graph, which is ***depth 8***, which have the ***highest classification accruracy*** on the testing dataset as depicted in the graph below.
+To dertermine the optimal depth for the decision tree, we iterated over a range of values to determine the optimal depth of the tree. By plotting a graph of the classification accuracy and the depths of the tree, we are able to find the highest point of the graph, which is ***depth 8***, which have the ***highest classification accruracy*** of about `0.79` on the testing dataset as depicted in the graph below.
 
 <img src="https://i.imgur.com/Rnbv8MI.png" title="" alt="Accuracy agaisnt varying depth of claddification tree." width="561">
 
