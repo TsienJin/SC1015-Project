@@ -46,7 +46,7 @@ We also labeled the *Stress Analysis* dataset, from text to numeric values (in M
 ![Relabeling Primary Dataset](https://i.imgur.com/0AAc37X.png)
 
 ### Changing Units for Temperature
-We first converted the column of *Body temperature* in the Dataset *Human Stress Detection in and through Sleep* from <u>farenheit</u> to <u>celsius</u>, so that it is easier for users to understand and input their data.
+We  converted the column of *Body temperature* in the Dataset *Human Stress Detection in and through Sleep* from <u>fahrenheit</u> to <u>celsius</u>, so that it is easier for users to understand and input their data.
 
 ![Converting farenheight to celsius](https://i.imgur.com/xkq3Npp.png)
 
