@@ -32,7 +32,7 @@ On the other hand, for the dataset, "Stress Analysis", have ***4 stress levels**
 - 2 - moderate
 - 3 - severe
 
-By suitability, we relabelled the stress levels of the dataset "Human Stress Detection in and through Sleep" from 5 levels of stress to 4 levels of stress, so as to be able to compare with the "Stress Analysis" dataset. For the dataset "Human Stress Detection in and through Sleep", We re-categorised (in EDA/Human Stress Detection in and through Sleep EDA.ipynb):
+By suitability, we relabelled the stress levels of the dataset "Human Stress Detection in and through Sleep" from 5 levels of stress to 4 levels of stress, so as to be able to compare with the "Stress Analysis" dataset. For the dataset "Human Stress Detection in and through Sleep", We re-categorised (in SecDataSet/MainSecDataSet.ipynb):
 - 0 - low/normal --> 0 - no
 - 1 - medium low --> 1 - mild
 - 2 - medium, 3 - medium high --> 2 - moderate
@@ -40,7 +40,7 @@ By suitability, we relabelled the stress levels of the dataset "Human Stress Det
 
 ![Relabeling stress level](https://i.imgur.com/ykpEpBt.png)
 
-We also labeled the *Stress Analysis* dataset, from text to numeric values (in ML/Classification.ipynb) to facilitate machine learning.
+We also labeled the *Stress Analysis* dataset, from text to numeric values (in PriDataSet/Clustering.ipynb) to facilitate machine learning.
 - "No": 0
 - "Mild": 1
 - "Moderate": 2
@@ -49,7 +49,7 @@ We also labeled the *Stress Analysis* dataset, from text to numeric values (in M
 ![Relabeling Primary Dataset](https://i.imgur.com/0AAc37X.png)
 
 ### Changing Units for Temperature
-We  converted the column of *Body temperature* in the Dataset *Human Stress Detection in and through Sleep* from <u>fahrenheit</u> to <u>celsius</u>, so that it is easier for users to understand and input their data (in EDA/Human Stress Detection in and through Sleep EDA.ipynb).
+We  converted the column of *Body temperature* in the Dataset *Human Stress Detection in and through Sleep* from <u>fahrenheit</u> to <u>celsius</u>, so that it is easier for users to understand and input their data (in SecDataSet/MainSecDataSet.ipynb).
 
 ![Converting farenheight to celsius](https://i.imgur.com/xkq3Npp.png)
 
@@ -63,7 +63,7 @@ Therefore, there is no one factor that affects `"Stress"` the most, and all the 
 
 ![Distribution of stress levels](https://i.imgur.com/cCNfs3j.png)
 
-Furthermore, we can observe that this dataset is biased towards `Stress_Label` of value `1` and `2` accounting for almost all the data entries. This may potentially hamper the classification accuracy of our machine models.
+Furthermore, we can observe that this dataset is biased towards `Stress_Label` of value `1` and `2` accounting for almost all the data entries (in SecDataSet/catagorical_sleep.ipynb). This may potentially hamper the classification accuracy of our machine models.
 
 
 ## Building Machine Learning Models
