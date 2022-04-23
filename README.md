@@ -83,7 +83,7 @@ dataTrain, dataTest = train_test_split(data, train_size=0.8)
 
 
 ### Classification Tree
-To dertermine the optimal depth for the decision tree, we iterated over a range of values to determine the optimal depth of the tree. By plotting a graph of the classification accuracy and the depths of the tree, we are able to find the highest point of the graph, which is ***depth 8***, which have the ***highest classification accruracy*** on the testing dataset as depicted in the graph below.
+To dertermine the optimal depth for the decision tree, we iterated over a range of values to determine the optimal depth of the tree. By plotting a graph of the classification accuracy and the depths of the tree, we are able to find the highest point of the graph, which is ***depth 8***, which have the ***highest classification accruracy*** of about `0.79` on the testing dataset as depicted in the graph below.
 
 <img src="https://i.imgur.com/Rnbv8MI.png" title="" alt="Accuracy agaisnt varying depth of claddification tree." width="561">
 
@@ -195,10 +195,10 @@ Since now we are able to predict stress levels using the primary dataset based o
 ![Linear regression code](https://i.imgur.com/fmBjULZ.png) ![Predicting REM using stress level](https://i.imgur.com/ocSPOZH.png) ![Linear regression line for REM using stress level](https://i.imgur.com/kppN846.png) ![Predicting sleep hours using stress level](https://i.imgur.com/98YAL7n.png) ![Linear regression line for REM using stress level](https://i.imgur.com/9BIdwRW.png)
 
 ### Findings
-- From the high Explained Variance (R^2) and low Mean Squared Error (MSE), we can tell that it is a good model of linear regression.   
-- Thus, with the coefficients of the linear regression model, we can now link both datasets and models together, using the common data of `"Stress Level"`, to predict sleep quality using emotions.   
-- However, since our stress level only have `four` discrete levels, it also means that our predicted values of `Eye Movement (REM)` and `Sleeping Hours` as measures for sleep quality, will only have `four` discrete values, which means everybody who have the same stress level, will have the same `Eye Movement (REM)` and `Sleeping Hours`, and thus same sleep quality.   
-- Since that is not the case, it means that our dataset could be further improved by having numeric values for stress, instead of categorical values for stress levels.   
+- From the high Explained Variance (R^2) and low Mean Squared Error (MSE), we can tell that it is a good model of linear regression  
+- Thus, with the coefficients of the linear regression model, we can now link both datasets and models together, using the common data of `"Stress Level"`, to predict sleep quality using emotions  
+- However, since our stress level only have `four` discrete levels, it also means that our predicted values of `Eye Movement (REM)` and `Sleeping Hours` as measures for sleep quality, will only have `four` discrete values, which means everybody who have the same stress level, will have the same `Eye Movement (REM)` and `Sleeping Hours`, and thus same sleep quality  
+- Since that is not the case, it means that our dataset could be further improved by having numeric values for stress, instead of categorical values for stress levels  
 
 # Sub-topic 2: How can we use numeric sleeping data to predict stress level if emotions are unavailable
 In the case of the user being unsure of his/her own emotions, he/she can also rely on his/her numeric sleeping data to predict his/her stress level.
